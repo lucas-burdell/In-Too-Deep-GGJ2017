@@ -52,7 +52,10 @@ color = make_color_rgb(0, 200, 255)
           <argument>
             <kind>1</kind>
             <string>///Changing background color
-alpha = max(min(1 - (obj_diver.y  / depthThreshold), 1), 0);
+max_alpha = 1
+min_alpha = .05
+
+alpha = max(min(1 - (obj_diver.y  / depthThreshold), max_alpha), min_alpha);
 color = make_color_rgb(0, 200 * alpha, 255 * alpha);
 background_color = color
 </string>
