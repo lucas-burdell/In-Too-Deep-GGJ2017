@@ -32,6 +32,12 @@ current_depth = 0
 //lowest depth achieved
 lowest_depth = 0
 
+//current oxygen
+current_oxygen = 0
+
+//max oxygen
+maximum_oxygen = 300
+
 //total cash
 cash = 0
 
