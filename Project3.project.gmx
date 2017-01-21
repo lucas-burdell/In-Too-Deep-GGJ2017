@@ -89,6 +89,7 @@
     <object>objects\rock_2</object>
     <object>objects\rock_3</object>
     <object>objects\rock_4</object>
+    <object>objects\Collidable</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\RM_Main_Menu</room>
