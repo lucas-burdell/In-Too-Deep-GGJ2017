@@ -49,6 +49,19 @@
     <object>objects\storage</object>
     <object>objects\ingame_music_player</object>
     <object>objects\obj_divingbell</object>
+    <object>objects\jelly_fish_green</object>
+    <object>objects\jelly_fish_orange</object>
+    <object>objects\jelly_fish_pink</object>
+    <object>objects\fish_3_red</object>
+    <object>objects\fish_3_green</object>
+    <object>objects\fish_3_blue</object>
+    <object>objects\fish_1_red</object>
+    <object>objects\fish_1_purple</object>
+    <object>objects\fish_1_gold</object>
+    <object>objects\coral_1_purple</object>
+    <object>objects\coral_1_orange</object>
+    <object>objects\coral_1_green</object>
+    <object>objects\_chest_</object>
     <objects name="OBJ_Cordell_Main_Menu">
       <object>objects\OBJ_Main_Menu_Controller</object>
       <object>objects\OBJ_Menu_Button</object>
@@ -56,6 +69,7 @@
       <object>objects\OBJ_Credits_Button</object>
       <object>objects\OBJ_Exit_Button</object>
     </objects>
+
   </objects>
   <rooms name="rooms">
     <room>rooms\RM_Main_Menu</room>
