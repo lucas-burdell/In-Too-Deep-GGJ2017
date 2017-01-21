@@ -13,6 +13,12 @@
     <sprite>sprites\sprite2</sprite>
     <sprite>sprites\sp_light</sprite>
     <sprite>sprites\sprite2_new</sprite>
+    <sprites name="SPR_Cordell_Main_Menu">
+      <sprite>sprites\SPR_Title_Temp</sprite>
+      <sprite>sprites\SPR_Play_Temp</sprite>
+      <sprite>sprites\SPR_Credits_Temp</sprite>
+      <sprite>sprites\SPR_Exit_Temp</sprite>
+    </sprites>
     <sprite>sprites\chest</sprite>
     <sprite>sprites\coral_one_green</sprite>
     <sprite>sprites\coral_one_orange</sprite>
@@ -28,7 +34,11 @@
     <sprite>sprites\jellly_fish_pink</sprite>
     <sprite>sprites\rope_section</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\BG_Main_Menu_01</background>
+    <background>background\BG_Main_Menu_02</background>
+    <background>background\BG_Main_Menu_03</background>
+  </backgrounds>
   <paths name="paths"/>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader0.shader</shader>
@@ -52,8 +62,17 @@
     <object>objects\coral_1_orange</object>
     <object>objects\coral_1_green</object>
     <object>objects\_chest_</object>
+    <objects name="OBJ_Cordell_Main_Menu">
+      <object>objects\OBJ_Main_Menu_Controller</object>
+      <object>objects\OBJ_Menu_Button</object>
+      <object>objects\OBJ_Play_Button</object>
+      <object>objects\OBJ_Credits_Button</object>
+      <object>objects\OBJ_Exit_Button</object>
+    </objects>
+
   </objects>
   <rooms name="rooms">
+    <room>rooms\RM_Main_Menu</room>
     <room>rooms\room0</room>
   </rooms>
   <help>

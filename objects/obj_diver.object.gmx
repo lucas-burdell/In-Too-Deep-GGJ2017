@@ -33,6 +33,11 @@ vsp = 10; //vertical speed
 //constant
 maxSpeed = 10;
 speedDecay = .1;
+
+//oxygen levels
+//with (storage) {
+    storage.current_oxygen = storage.maximum_oxygen;
+//}
 </string>
           </argument>
         </arguments>
@@ -139,9 +144,31 @@ if (place_meeting(x, y + delta_vsp, other)) {
             <string>///Depth Counter
 var curdepth = floor(y / 3)
 
-with (storage) {
-     other.current_depth = curdepth;
-}
+storage.current_depth = curdepth;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Oxygen Counter
+
+storage.current_oxygen = storage.current_oxygen - (1/60);
 </string>
           </argument>
         </arguments>
@@ -164,10 +191,12 @@ with (storage) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>with (storage) {
-     draw_set_color(make_color_rgb(255,255,255))
-     draw_text(view_xview[view_current], view_yview[view_current], "depth: " + string(other.current_depth) + " meters");
-}
+            <string>draw_set_color(make_color_rgb(255,255,255))
+draw_text(view_xview[view_current], view_yview[view_current], "depth: " + string(storage.current_depth) + " meters");
+draw_set_color (make_color_rgb(255,255,255))
+draw_text(view_xview[view_current], view_yview[view_current] + 16, "oxygen: " + string(storage.current_oxygen));
+
+
 </string>
           </argument>
         </arguments>
