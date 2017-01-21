@@ -11,14 +11,7 @@
     <sprite>sprites\sp_diver</sprite>
     <sprite>sprites\sp_divingbell</sprite>
     <sprite>sprites\sprite2</sprite>
-    <sprite>sprites\sp_light</sprite>
     <sprite>sprites\sprite2_new</sprite>
-    <sprites name="SPR_Cordell_Main_Menu">
-      <sprite>sprites\SPR_Title_Temp</sprite>
-      <sprite>sprites\SPR_Play_Temp</sprite>
-      <sprite>sprites\SPR_Credits_Temp</sprite>
-      <sprite>sprites\SPR_Exit_Temp</sprite>
-    </sprites>
     <sprite>sprites\chest</sprite>
     <sprite>sprites\coral_one_green</sprite>
     <sprite>sprites\coral_one_orange</sprite>
@@ -33,6 +26,7 @@
     <sprite>sprites\jellly_fish_orange</sprite>
     <sprite>sprites\jellly_fish_pink</sprite>
     <sprite>sprites\rope_section</sprite>
+    <sprite>sprites\SPR_Light</sprite>
     <sprite>sprites\blackbox_broken</sprite>
     <sprite>sprites\blackbox</sprite>
     <sprite>sprites\bubble</sprite>
@@ -43,12 +37,17 @@
     <sprite>sprites\rock_one</sprite>
     <sprite>sprites\rock_three</sprite>
     <sprite>sprites\rock_two</sprite>
+    <sprite>sprites\SPR_Box</sprite>
+    <sprite>sprites\SPR_Credits_Temp</sprite>
+    <sprite>sprites\SPR_Exit_Temp</sprite>
+    <sprite>sprites\SPR_Play_Temp</sprite>
+    <sprite>sprites\SPR_Player_Flashlight_Testing</sprite>
+    <sprite>sprites\SPR_Title_Temp</sprite>
+    <sprite>sprites\sp_diver_suit_1</sprite>
+    <sprite>sprites\sp_diver_light_outline</sprite>
+    <sprite>sprites\sp_flipper_1</sprite>
   </sprites>
-  <backgrounds name="background">
-    <background>background\BG_Main_Menu_01</background>
-    <background>background\BG_Main_Menu_02</background>
-    <background>background\BG_Main_Menu_03</background>
-  </backgrounds>
+  <backgrounds name="background"/>
   <paths name="paths"/>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader0.shader</shader>
@@ -59,6 +58,8 @@
     <object>objects\storage</object>
     <object>objects\ingame_music_player</object>
     <object>objects\obj_divingbell</object>
+    <object>objects\obj_light</object>
+    <object>objects\obj_ping</object>
     <object>objects\jelly_fish_green</object>
     <object>objects\jelly_fish_orange</object>
     <object>objects\jelly_fish_pink</object>
@@ -89,9 +90,10 @@
     <object>objects\rock_2</object>
     <object>objects\rock_3</object>
     <object>objects\rock_4</object>
+    <object>objects\obj_left_flipper</object>
+    <object>objects\obj_right_flipper</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\RM_Main_Menu</room>
     <room>rooms\room0</room>
   </rooms>
   <help>

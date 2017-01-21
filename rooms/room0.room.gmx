@@ -55,7 +55,8 @@
     <instance objName="obj_background_color_changer" x="0" y="0" name="inst_EABE2EC5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ingame_music_player" x="64" y="0" name="inst_EA29C675" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_divingbell" x="2432" y="128" name="inst_E200EC2F" locked="0" code="" scaleX="0.693548381328583" scaleY="0.627413153648376" colour="4294967295" rotation="0"/>
-    <instance objName="obj_diver" x="2432" y="256" name="inst_9B0FC547" locked="0" code="" scaleX="3" scaleY="4" colour="4294967295" rotation="0"/>
+    <instance objName="obj_diver" x="2432" y="384" name="inst_9B0FC547" locked="0" code="" scaleX="0.444794952869415" scaleY="0.572463750839233" colour="4294967295" rotation="0"/>
+    <instance objName="obj_light" x="2496" y="416" name="inst_0AEAAFA6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="rock_2" x="256" y="3040" name="inst_D3392A2D" locked="0" code="" scaleX="1.99363052845001" scaleY="1.08823525905609" colour="4294967295" rotation="0"/>
     <instance objName="rock_2" x="4640" y="10944" name="inst_E908AD9B" locked="0" code="" scaleX="1.11252653598785" scaleY="3.67647051811218" colour="4294967295" rotation="0"/>
     <instance objName="rock_2" x="1248" y="14048" name="inst_1189F678" locked="0" code="" scaleX="2.94479823112488" scaleY="2.02941179275513" colour="4294967295" rotation="0"/>
@@ -103,6 +104,8 @@
     <instance objName="rock_4" x="3744" y="8128" name="inst_41CE3FB3" locked="0" code="" scaleX="2.64267992973328" scaleY="3.51886796951294" colour="4294967295" rotation="70"/>
     <instance objName="rock_2" x="3904" y="27104" name="inst_CD842E11" locked="0" code="" scaleX="5.11889600753784" scaleY="1.20588231086731" colour="4294967295" rotation="0"/>
     <instance objName="rock_4" x="960" y="27072" name="inst_E9E30391" locked="0" code="" scaleX="7.7245659828186" scaleY="1.40566039085388" colour="4294967295" rotation="0"/>
+    <instance objName="obj_left_flipper" x="2385" y="340" name="inst_8EA23935" locked="0" code="" scaleX="0.465116292238235" scaleY="0.428571432828903" colour="4294967295" rotation="0"/>
+    <instance objName="obj_right_flipper" x="2365" y="375" name="inst_31A0EA14" locked="0" code="" scaleX="0.469999998807907" scaleY="0.430000007152557" colour="4294967295" rotation="0"/>
     <instance objName="coral_1_purple" x="288" y="2752" name="inst_3CAF0CA2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="coral_1_purple" x="1440" y="13632" name="inst_96222074" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="coral_1_purple" x="4192" y="18400" name="inst_A9F384C4" locked="0" code="" scaleX="0.498470962047577" scaleY="0.501319289207458" colour="4294967295" rotation="0"/>
