@@ -19,6 +19,20 @@
       <sprite>sprites\SPR_Credits_Temp</sprite>
       <sprite>sprites\SPR_Exit_Temp</sprite>
     </sprites>
+    <sprite>sprites\chest</sprite>
+    <sprite>sprites\coral_one_green</sprite>
+    <sprite>sprites\coral_one_orange</sprite>
+    <sprite>sprites\coral_one_purple</sprite>
+    <sprite>sprites\fish_one_gold</sprite>
+    <sprite>sprites\fish_one_purple</sprite>
+    <sprite>sprites\fish_one_red</sprite>
+    <sprite>sprites\fish_three_blue</sprite>
+    <sprite>sprites\fish_three_green</sprite>
+    <sprite>sprites\fish_three_red</sprite>
+    <sprite>sprites\jellly_fish_green</sprite>
+    <sprite>sprites\jellly_fish_orange</sprite>
+    <sprite>sprites\jellly_fish_pink</sprite>
+    <sprite>sprites\rope_section</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\BG_Main_Menu_01</background>
