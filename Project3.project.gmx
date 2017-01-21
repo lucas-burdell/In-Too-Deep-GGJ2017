@@ -11,7 +11,6 @@
     <sprite>sprites\sp_diver</sprite>
     <sprite>sprites\sp_divingbell</sprite>
     <sprite>sprites\sprite2</sprite>
-    <sprite>sprites\sp_light</sprite>
     <sprite>sprites\sprite2_new</sprite>
     <sprite>sprites\chest</sprite>
     <sprite>sprites\coral_one_green</sprite>
@@ -27,6 +26,7 @@
     <sprite>sprites\jellly_fish_orange</sprite>
     <sprite>sprites\jellly_fish_pink</sprite>
     <sprite>sprites\rope_section</sprite>
+    <sprite>sprites\SPR_Light</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -39,6 +39,8 @@
     <object>objects\storage</object>
     <object>objects\ingame_music_player</object>
     <object>objects\obj_divingbell</object>
+    <object>objects\obj_light</object>
+    <object>objects\obj_ping</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

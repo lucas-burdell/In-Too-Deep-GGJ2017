@@ -79,8 +79,8 @@ draw_set_blend_mode(bm_normal);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x = OBJ_Player.x;
-y = OBJ_Player.y;
+            <string>x = obj_diver.x;
+y = obj_diver.y;
 </string>
           </argument>
         </arguments>
@@ -103,7 +103,8 @@ y = OBJ_Player.y;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_surface(view_xview, view_yview, surf);
+            <string>surf = surface_create(1600, 900);
+draw_surface(view_xview, view_yview, surf);
 </string>
           </argument>
         </arguments>
