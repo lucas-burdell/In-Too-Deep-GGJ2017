@@ -33,7 +33,7 @@ current_depth = 0
 lowest_depth = 0
 
 //max oxygen
-maximum_oxygen = 300
+maximum_oxygen = 120
 
 //current oxygen
 current_oxygen = 0

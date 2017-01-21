@@ -11,14 +11,7 @@
     <sprite>sprites\sp_diver</sprite>
     <sprite>sprites\sp_divingbell</sprite>
     <sprite>sprites\sprite2</sprite>
-    <sprite>sprites\sp_light</sprite>
     <sprite>sprites\sprite2_new</sprite>
-    <sprites name="SPR_Cordell_Main_Menu">
-      <sprite>sprites\SPR_Title_Temp</sprite>
-      <sprite>sprites\SPR_Play_Temp</sprite>
-      <sprite>sprites\SPR_Credits_Temp</sprite>
-      <sprite>sprites\SPR_Exit_Temp</sprite>
-    </sprites>
     <sprite>sprites\chest</sprite>
     <sprite>sprites\coral_one_green</sprite>
     <sprite>sprites\coral_one_orange</sprite>
@@ -33,6 +26,26 @@
     <sprite>sprites\jellly_fish_orange</sprite>
     <sprite>sprites\jellly_fish_pink</sprite>
     <sprite>sprites\rope_section</sprite>
+    <sprite>sprites\SPR_Light</sprite>
+    <sprite>sprites\blackbox_broken</sprite>
+    <sprite>sprites\blackbox</sprite>
+    <sprite>sprites\bubble</sprite>
+    <sprite>sprites\coral_two_green</sprite>
+    <sprite>sprites\coral_two_pink</sprite>
+    <sprite>sprites\coral_two_teal</sprite>
+    <sprite>sprites\rock_four</sprite>
+    <sprite>sprites\rock_one</sprite>
+    <sprite>sprites\rock_three</sprite>
+    <sprite>sprites\rock_two</sprite>
+    <sprite>sprites\SPR_Box</sprite>
+    <sprite>sprites\SPR_Credits_Temp</sprite>
+    <sprite>sprites\SPR_Exit_Temp</sprite>
+    <sprite>sprites\SPR_Play_Temp</sprite>
+    <sprite>sprites\SPR_Player_Flashlight_Testing</sprite>
+    <sprite>sprites\SPR_Title_Temp</sprite>
+    <sprite>sprites\sp_diver_suit_1</sprite>
+    <sprite>sprites\sp_diver_light_outline</sprite>
+    <sprite>sprites\sp_flipper_1</sprite>
     <sprites name="SPR_SHOP_Cordell">
       <sprite>sprites\SPR_Shop_Flippers</sprite>
       <sprite>sprites\SPR_Shop_OxygenTank</sprite>
@@ -65,6 +78,8 @@
     <object>objects\storage</object>
     <object>objects\ingame_music_player</object>
     <object>objects\obj_divingbell</object>
+    <object>objects\obj_light</object>
+    <object>objects\obj_ping</object>
     <object>objects\jelly_fish_green</object>
     <object>objects\jelly_fish_orange</object>
     <object>objects\jelly_fish_pink</object>
@@ -78,6 +93,19 @@
     <object>objects\coral_1_orange</object>
     <object>objects\coral_1_green</object>
     <object>objects\_chest_</object>
+    <object>objects\blackbox__broken</object>
+    <object>objects\blackbox_</object>
+    <object>objects\bubble_</object>
+    <object>objects\coral_2_green</object>
+    <object>objects\coral_2_pink</object>
+    <object>objects\coral_2_teal</object>
+    <object>objects\rock_1</object>
+    <object>objects\rock_2</object>
+    <object>objects\rock_3</object>
+    <object>objects\rock_4</object>
+    <object>objects\Collidable</object>
+    <object>objects\obj_left_flipper</object>
+    <object>objects\obj_right_flipper</object>
     <objects name="OBJ_Cordell_Main_Menu">
       <object>objects\OBJ_Main_Menu_Controller</object>
       <object>objects\OBJ_Menu_Button</object>
@@ -99,9 +127,9 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\RM_Shop</room>
     <room>rooms\RM_Main_Menu</room>
     <room>rooms\room0</room>
+    <room>rooms\RM_Shop</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
