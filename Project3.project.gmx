@@ -46,8 +46,28 @@
     <sprite>sprites\sp_diver_suit_1</sprite>
     <sprite>sprites\sp_diver_light_outline</sprite>
     <sprite>sprites\sp_flipper_1</sprite>
+    <sprites name="SPR_SHOP_Cordell">
+      <sprite>sprites\SPR_Shop_Flippers</sprite>
+      <sprite>sprites\SPR_Shop_OxygenTank</sprite>
+      <sprite>sprites\SPR_Shop_PressureSuit</sprite>
+      <sprite>sprites\SPR_Shop_FlashLight</sprite>
+      <sprite>sprites\SPR_Shop_Sonar</sprite>
+      <sprite>sprites\SPR_Shop_StartingDepth</sprite>
+      <sprite>sprites\SPR_Shop_Refills</sprite>
+      <sprite>sprites\SPR_Shop_Signs</sprite>
+      <sprite>sprites\SPR_Text_Brown</sprite>
+      <sprite>sprites\SPR_Text_Green</sprite>
+      <sprite>sprites\SPR_Text_Red</sprite>
+      <sprite>sprites\SPR_Text_Upgrade</sprite>
+      <sprite>sprites\SPR_Shop_Sign</sprite>
+    </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\BG_Main_Menu_01</background>
+    <background>background\BG_Main_Menu_02</background>
+    <background>background\BG_Main_Menu_03</background>
+    <background>background\BG_Shop</background>
+  </backgrounds>
   <paths name="paths"/>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader0.shader</shader>
@@ -73,13 +93,6 @@
     <object>objects\coral_1_orange</object>
     <object>objects\coral_1_green</object>
     <object>objects\_chest_</object>
-    <objects name="OBJ_Cordell_Main_Menu">
-      <object>objects\OBJ_Main_Menu_Controller</object>
-      <object>objects\OBJ_Menu_Button</object>
-      <object>objects\OBJ_Play_Button</object>
-      <object>objects\OBJ_Credits_Button</object>
-      <object>objects\OBJ_Exit_Button</object>
-    </objects>
     <object>objects\blackbox__broken</object>
     <object>objects\blackbox_</object>
     <object>objects\bubble_</object>
@@ -93,9 +106,30 @@
     <object>objects\Collidable</object>
     <object>objects\obj_left_flipper</object>
     <object>objects\obj_right_flipper</object>
+    <objects name="OBJ_Cordell_Main_Menu">
+      <object>objects\OBJ_Main_Menu_Controller</object>
+      <object>objects\OBJ_Menu_Button</object>
+      <object>objects\OBJ_Play_Button</object>
+      <object>objects\OBJ_Credits_Button</object>
+      <object>objects\OBJ_Exit_Button</object>
+    </objects>
+    <objects name="OBJ_Cordell_Shop">
+      <object>objects\OBJ_Shop_Controller</object>
+      <object>objects\OBJ_Upgrade_Base</object>
+      <object>objects\OBJ_Upgrade_Suit</object>
+      <object>objects\OBJ_Upgrade_Sonar</object>
+      <object>objects\OBJ_Upgrade_Flippers</object>
+      <object>objects\OBJ_Upgrade_Tank</object>
+      <object>objects\OBJ_Upgrade_Refills</object>
+      <object>objects\OBJ_Upgrade_Light</object>
+      <object>objects\OBJ_Upgrade_Depth</object>
+      <object>objects\OBJ_Sign</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\RM_Main_Menu</room>
     <room>rooms\room0</room>
+    <room>rooms\RM_Shop</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
