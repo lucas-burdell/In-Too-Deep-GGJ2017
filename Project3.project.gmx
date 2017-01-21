@@ -27,7 +27,6 @@
     <sprite>sprites\jellly_fish_pink</sprite>
     <sprite>sprites\rope_section</sprite>
     <sprite>sprites\SPR_Light</sprite>
-
     <sprite>sprites\blackbox_broken</sprite>
     <sprite>sprites\blackbox</sprite>
     <sprite>sprites\bubble</sprite>
@@ -38,7 +37,12 @@
     <sprite>sprites\rock_one</sprite>
     <sprite>sprites\rock_three</sprite>
     <sprite>sprites\rock_two</sprite>
-
+    <sprite>sprites\SPR_Box</sprite>
+    <sprite>sprites\SPR_Credits_Temp</sprite>
+    <sprite>sprites\SPR_Exit_Temp</sprite>
+    <sprite>sprites\SPR_Play_Temp</sprite>
+    <sprite>sprites\SPR_Player_Flashlight_Testing</sprite>
+    <sprite>sprites\SPR_Title_Temp</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>

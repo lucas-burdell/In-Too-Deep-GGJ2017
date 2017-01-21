@@ -34,6 +34,49 @@ surface_reset_target();
         </arguments>
       </action>
     </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//surf = surface_create(1600, 900);
+if (surface_exists(surf)) {
+    draw_surface(surf, view_xview, view_yview);
+} else {
+  surf = surface_create(1600, 900);
+}
+surface_set_target(surf);
+draw_clear_alpha(c_black, 1- obj_background_color_changer.alpha);
+draw_set_blend_mode(bm_subtract);
+draw_sprite_ext(SPR_Light, 0, x - view_xview, y - view_yview, 1, 1, point_direction(x, y, mouse_x, mouse_y), c_black, 1 - obj_background_color_changer.alpha);
+draw_set_color(c_white);
+draw_set_alpha(1 - obj_background_color_changer.alpha)
+draw_ellipse(
+             x - view_xview - obj_diver.sprite_width/2,
+             y - view_yview - obj_diver.sprite_height/2, 
+             x - view_xview + obj_diver.sprite_width/2, 
+             y - view_yview + obj_diver.sprite_height/2, 
+             false
+)
+surface_reset_target();
+draw_set_blend_mode(bm_normal);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -76,13 +119,14 @@ y = obj_diver.y;
           <argument>
             <kind>1</kind>
             <string>//surf = surface_create(1600, 900);
+/*
 if (surface_exists(surf)) {
     draw_surface(surf, view_xview, view_yview);
 } else {
   surf = surface_create(1600, 900);
 }
 surface_set_target(surf);
-draw_clear_alpha(c_black, 1 - obj_background_color_changer.alpha);
+draw_clear_alpha(c_black, 1- obj_background_color_changer.alpha);
 draw_set_blend_mode(bm_subtract);
 draw_sprite_ext(SPR_Light, 0, x - view_xview, y - view_yview, 1, 1, point_direction(x, y, mouse_x, mouse_y), c_black, 1 - obj_background_color_changer.alpha);
 draw_set_color(c_white);
@@ -96,6 +140,7 @@ draw_ellipse(
 )
 surface_reset_target();
 draw_set_blend_mode(bm_normal);
+*/
 </string>
           </argument>
         </arguments>

@@ -192,8 +192,10 @@ storage.current_oxygen = storage.current_oxygen - (1/60);
           <argument>
             <kind>1</kind>
             <string>draw_set_color(make_color_rgb(255,255,255))
+draw_set_alpha(1)
 draw_text(view_xview[view_current], view_yview[view_current], "depth: " + string(storage.current_depth) + " meters");
-draw_set_color (make_color_rgb(255,255,255))
+draw_set_color(make_color_rgb(255,255,255))
+draw_set_alpha(1)
 draw_text(view_xview[view_current], view_yview[view_current] + 16, "oxygen: " + string(storage.current_oxygen));
 
 
