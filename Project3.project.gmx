@@ -33,6 +33,16 @@
     <sprite>sprites\jellly_fish_orange</sprite>
     <sprite>sprites\jellly_fish_pink</sprite>
     <sprite>sprites\rope_section</sprite>
+    <sprite>sprites\blackbox_broken</sprite>
+    <sprite>sprites\blackbox</sprite>
+    <sprite>sprites\bubble</sprite>
+    <sprite>sprites\coral_two_green</sprite>
+    <sprite>sprites\coral_two_pink</sprite>
+    <sprite>sprites\coral_two_teal</sprite>
+    <sprite>sprites\rock_four</sprite>
+    <sprite>sprites\rock_one</sprite>
+    <sprite>sprites\rock_three</sprite>
+    <sprite>sprites\rock_two</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\BG_Main_Menu_01</background>
@@ -69,7 +79,16 @@
       <object>objects\OBJ_Credits_Button</object>
       <object>objects\OBJ_Exit_Button</object>
     </objects>
-
+    <object>objects\blackbox__broken</object>
+    <object>objects\blackbox_</object>
+    <object>objects\bubble_</object>
+    <object>objects\coral_2_green</object>
+    <object>objects\coral_2_pink</object>
+    <object>objects\coral_2_teal</object>
+    <object>objects\rock_1</object>
+    <object>objects\rock_2</object>
+    <object>objects\rock_3</object>
+    <object>objects\rock_4</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\RM_Main_Menu</room>
