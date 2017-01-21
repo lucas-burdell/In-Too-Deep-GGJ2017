@@ -43,6 +43,9 @@
     <sprite>sprites\SPR_Play_Temp</sprite>
     <sprite>sprites\SPR_Player_Flashlight_Testing</sprite>
     <sprite>sprites\SPR_Title_Temp</sprite>
+    <sprite>sprites\sp_diver_suit_1</sprite>
+    <sprite>sprites\sp_diver_light_outline</sprite>
+    <sprite>sprites\sp_flipper_1</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -87,6 +90,8 @@
     <object>objects\rock_2</object>
     <object>objects\rock_3</object>
     <object>objects\rock_4</object>
+    <object>objects\obj_left_flipper</object>
+    <object>objects\obj_right_flipper</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
