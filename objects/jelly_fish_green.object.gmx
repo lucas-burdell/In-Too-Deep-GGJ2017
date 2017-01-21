@@ -25,26 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///varibles
-timer = 0
-//0 is up, 1 is downone, 2 is downtwo, 3 is downthree, 4 to start
+            <string>timer = 0
 upOrDown = 0
-//direction
-up = 90
-down = 270
-right = 0
-left = 180
-//Speed changes
-motionStart = 1
-motionUp = 2
-motionDownOne = 2
-motionDownTwo = .5
-motionDownThree = .25
-//before changing direction
-timeDownOne = 900
-timeDowntwo = 1125
-timeDownThree = 1575
-timeEndCycle = 3375
+
 </string>
           </argument>
         </arguments>
@@ -68,37 +51,46 @@ timeEndCycle = 3375
           <argument>
             <kind>1</kind>
             <string>///up and down
-    
-    
-    if (timer == 0 &amp;&amp; upOrDown = 4){
-    motion_add(up, motionStart) 
-    upOrDown = 1
-        
-    } else if(timer == 0 &amp;&amp; upOrDown = 0){
-    motion_add(up, motionUp) 
-    upOrDown = 1
-    
-    } else if(timer &gt;= timeDownOne &amp;&amp; upOrDown = 1){
-    motion_add(down, motionDownOne) 
-    upOrDown = 2
-    
-    } else if(timer &gt;= timeDowntwo &amp;&amp; upOrDown = 2){
-    motion_add(up, motionDownTwo)
-    upOrDown = 3
-    
-    } else if(timer &gt;= timeDownThree &amp;&amp; upOrDown = 3){
-    motion_add(up, motionDownThree)
-    upOrDown = 0
-    timer = 0
+timer += 1
+show_debug_message(timer)
+//show_debug_message(upOrDown)
+//direction
+up = 90
+down = 270
+right = 0
+left = 180
+//Speed changes
+addMotion = .5
+subMotion = .25
+reverse = (addMotion + addMotion)
+//before changing direction
+timebefore = 61
+
+
+
+    if (timer == 0){
+    motion_add(up, addMotion)
     }
     
     
-    //timer code
-    show_debug_message(timer)
-     timer += 1
-     
-    if(timer &gt;= timeEndCycle){
-     timer = 0
+    
+    if(upOrDown == 0){
+         if (timer &gt;= timebefore ){
+             motion_add(down,addMotion)
+             //show_debug_message(down)
+             //motion_add(down,subMotion)
+             upOrDown = 1
+             time = 1
+        } 
+        time = 1
+    } else if(upOrDown == 1){
+         if (timer &gt;= timebefore ){
+             motion_add(up,addMotion)
+             //show_debug_message(up)
+             upOrDown = 0
+             time = 1
+         }
+         time = 1
     }
 </string>
           </argument>

@@ -92,6 +92,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\RM_Main_Menu</room>
+    <room>rooms\room0</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
