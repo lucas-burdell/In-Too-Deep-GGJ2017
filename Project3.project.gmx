@@ -90,6 +90,7 @@
     <object>objects\rock_2</object>
     <object>objects\rock_3</object>
     <object>objects\rock_4</object>
+    <object>objects\Collidable</object>
     <object>objects\obj_left_flipper</object>
     <object>objects\obj_right_flipper</object>
   </objects>
