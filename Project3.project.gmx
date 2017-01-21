@@ -19,7 +19,6 @@
       <sprite>sprites\SPR_Credits_Temp</sprite>
       <sprite>sprites\SPR_Exit_Temp</sprite>
     </sprites>
-
     <sprite>sprites\chest</sprite>
     <sprite>sprites\coral_one_green</sprite>
     <sprite>sprites\coral_one_orange</sprite>
