@@ -2,9 +2,9 @@
 <object>
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
-  <visible>0</visible>
+  <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,61 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Create game vars
-//current depth
-current_depth = 0
-
-//lowest depth achieved
-lowest_depth = 0
-
-//max oxygen
-maximum_oxygen = 300
-
-//current oxygen
-current_oxygen = 0
-
-//total cash
-cash = 0
-
-//collected boxes. Array of nine arrays
-boxes_collected[8] = 0
-
-//upgrades
-
-//diver upgrades
-// flipper upgrade
-flippers[3] = 0
-flippers[0] = 1
-
-//oxygen tank upgrade
-tank[3] = 0
-tank[0] = 1
-
-// pressure suit upgrade
-suit[3] = 0
-suit[0] = 1
-
-// flashlight upgrade
-light[3] = 0
-light[0] = 1
-
-// sonar upgrade
-sonar[3] = 0
-sonar[0] = 1
-
-// DIVING BELL UPGRADES
-// pressure bell
-bell[3] = 0
-bell[0] = 1
-
-//oxygen refills upgrade
-refills[3] = 0
-refills[0] = 1
-
-//starting depth upgrade
-starting_depth[3] = 0
-starting_depth[0] = 1
-
+            <string>image_speed = 0;
+image_index = 0;
 </string>
           </argument>
         </arguments>
