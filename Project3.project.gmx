@@ -33,11 +33,27 @@
     <sprite>sprites\jellly_fish_orange</sprite>
     <sprite>sprites\jellly_fish_pink</sprite>
     <sprite>sprites\rope_section</sprite>
+    <sprites name="SPR_SHOP_Cordell">
+      <sprite>sprites\SPR_Shop_Flippers</sprite>
+      <sprite>sprites\SPR_Shop_OxygenTank</sprite>
+      <sprite>sprites\SPR_Shop_PressureSuit</sprite>
+      <sprite>sprites\SPR_Shop_FlashLight</sprite>
+      <sprite>sprites\SPR_Shop_Sonar</sprite>
+      <sprite>sprites\SPR_Shop_StartingDepth</sprite>
+      <sprite>sprites\SPR_Shop_Refills</sprite>
+      <sprite>sprites\SPR_Shop_Signs</sprite>
+      <sprite>sprites\SPR_Text_Brown</sprite>
+      <sprite>sprites\SPR_Text_Green</sprite>
+      <sprite>sprites\SPR_Text_Red</sprite>
+      <sprite>sprites\SPR_Text_Upgrade</sprite>
+      <sprite>sprites\SPR_Shop_Sign</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\BG_Main_Menu_01</background>
     <background>background\BG_Main_Menu_02</background>
     <background>background\BG_Main_Menu_03</background>
+    <background>background\BG_Shop</background>
   </backgrounds>
   <paths name="paths"/>
   <shaders name="shaders">
@@ -69,9 +85,21 @@
       <object>objects\OBJ_Credits_Button</object>
       <object>objects\OBJ_Exit_Button</object>
     </objects>
-
+    <objects name="OBJ_Cordell_Shop">
+      <object>objects\OBJ_Shop_Controller</object>
+      <object>objects\OBJ_Upgrade_Base</object>
+      <object>objects\OBJ_Upgrade_Suit</object>
+      <object>objects\OBJ_Upgrade_Sonar</object>
+      <object>objects\OBJ_Upgrade_Flippers</object>
+      <object>objects\OBJ_Upgrade_Tank</object>
+      <object>objects\OBJ_Upgrade_Refills</object>
+      <object>objects\OBJ_Upgrade_Light</object>
+      <object>objects\OBJ_Upgrade_Depth</object>
+      <object>objects\OBJ_Sign</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\RM_Shop</room>
     <room>rooms\RM_Main_Menu</room>
     <room>rooms\room0</room>
   </rooms>
