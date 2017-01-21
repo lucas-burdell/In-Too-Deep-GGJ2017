@@ -51,10 +51,8 @@
     <object>objects\storage</object>
     <object>objects\ingame_music_player</object>
     <object>objects\obj_divingbell</object>
-
     <object>objects\obj_light</object>
     <object>objects\obj_ping</object>
-
     <object>objects\jelly_fish_green</object>
     <object>objects\jelly_fish_orange</object>
     <object>objects\jelly_fish_pink</object>
