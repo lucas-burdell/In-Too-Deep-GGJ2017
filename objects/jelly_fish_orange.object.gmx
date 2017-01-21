@@ -7,7 +7,113 @@
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
-  <events/>
+  <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///varibles for movement
+//CycleIndicators
+cycleIndicators = 0
+start = 0
+one = 1
+two = 2
+three = 3
+Repeat = 4
+//direction
+up = 90
+down = 270
+right = 0
+left = 180
+//timer
+timer = 0
+//speed changes
+StartSpeed = 1
+ChangeOne = 2
+ChangeTwo = .5
+ChangeThree = .25
+//times of change
+Start = 0
+firstChange = 900
+P = (firstChange/4)
+secondChange = (P + firstChange)
+L = (P * 2)
+thirdChange = (L + secondChange)
+Z = (L * 4)
+endCycle = (firstChange + P + L + Z)
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///movement
+
+
+
+
+if(timer == Start &amp;&amp; cycleIndicators == start){
+motion_add(up, StartSpeed)
+cycleIndicators = one
+show_debug_message(timer)
+} 
+
+ if(timer == Start &amp;&amp; cycleIndicators == Repeat){
+ motion_add(up, ChangeOne)
+cycleIndicators = one
+show_debug_message(timer)
+} else if(timer == firstChange &amp;&amp; cycleIndicators == one){
+motion_add(down, ChangeOne)
+cycleIndicators = two
+show_debug_message(timer)
+} else if(timer == secondChange &amp;&amp; cycleIndicators == two){
+motion_add(up, ChangeTwo)
+cycleIndicators = three
+show_debug_message(timer)
+} else if(timer == thirdChange &amp;&amp; cycleIndicators == three){
+motion_add(up, ChangeThree)
+cycleIndicators = Repeat
+show_debug_message(timer)
+}
+timer += 1
+if(timer == endCycle){
+    timer = 0
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>
