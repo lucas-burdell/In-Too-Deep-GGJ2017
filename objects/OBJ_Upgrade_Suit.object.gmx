@@ -30,8 +30,9 @@
     
     if (position_meeting(mouse_x, mouse_y, self)) {
         image_index = 2;
-        if (mouse_check_button_pressed(mb_left) &amp;&amp; storage.Tier_Pressure_Suit &lt; 3) {
-            storage.Tier_Pressure_Suit = storage.Tier_Pressure_Suit + 1;
+        if (mouse_check_button_pressed(mb_left) &amp;&amp; storage.Tier_Pressure_Suit &lt; 3 &amp;&amp; storage.Upgrade_Points &gt; 0) {
+            storage.Tier_Pressure_Suit += 1;
+            storage.Upgrade_Points -= 1;
         }
     }
     

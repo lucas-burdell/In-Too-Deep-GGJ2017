@@ -45,14 +45,14 @@ instance_create(720, 378, OBJ_Shop_Flippers);
 instance_create(520, 459, OBJ_Upgrade_Tank);
 instance_create(720, 459, OBJ_Shop_Tank);
 
-instance_create(520, 552, OBJ_Upgrade_Refills);
-instance_create(720, 562, OBJ_Shop_Refills);
+//instance_create(520, 552, OBJ_Upgrade_Refills);
+//instance_create(720, 562, OBJ_Shop_Refills);
 
 instance_create(520, 642, OBJ_Upgrade_Light);
 instance_create(720, 652, OBJ_Shop_Light);
 
-instance_create(520, 736, OBJ_Upgrade_Depth);
-instance_create(720, 746, OBJ_Shop_Depth);
+//instance_create(520, 736, OBJ_Upgrade_Depth);
+//instance_create(720, 746, OBJ_Shop_Depth);
 </string>
           </argument>
         </arguments>
