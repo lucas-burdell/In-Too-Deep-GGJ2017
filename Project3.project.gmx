@@ -62,6 +62,8 @@
       <sprite>sprites\SPR_Shop_Sign</sprite>
     </sprites>
     <sprite>sprites\sp_tank</sprite>
+    <sprite>sprites\eel</sprite>
+    <sprite>sprites\anglerfish</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\BG_Main_Menu_01</background>
@@ -69,7 +71,11 @@
     <background>background\BG_Main_Menu_03</background>
     <background>background\BG_Shop</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\fish_path_one</path>
+    <path>paths\fish_path_two</path>
+    <path>paths\fish_path_three</path>
+  </paths>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader0.shader</shader>
   </shaders>
@@ -128,6 +134,8 @@
     </objects>
     <object>objects\attach_to_player</object>
     <object>objects\obj_tank_1</object>
+    <object>objects\anglerfish_</object>
+    <object>objects\eel_</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\RM_Main_Menu</room>
