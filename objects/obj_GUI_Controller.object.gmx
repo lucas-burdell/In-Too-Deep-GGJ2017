@@ -56,7 +56,7 @@ draw_text(view_xview[view_current] + oxygen_sprite_width/4 * oxygen_sprite_xscal
 //draw_sprite(Currency, 0, view_xview[view_current], view_yview[view_current] + 96);
 
 // cash text
-draw_text(view_xview[view_current] + 64, view_yview[view_current] + 16 + oxygen_sprite_height + 16, "Upgrade Points: " + string(storage.Upgrade_Points));
+draw_text(view_xview[view_current], view_yview[view_current] + 65, "Upgrade Points: " + string(storage.Upgrade_Points));
 </string>
           </argument>
         </arguments>
