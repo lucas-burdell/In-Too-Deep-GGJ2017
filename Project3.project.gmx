@@ -85,6 +85,8 @@
     <sprite>sprites\spr_ping</sprite>
     <sprite>sprites\sp_dialog_box</sprite>
     <sprite>sprites\SPR_Controlls</sprite>
+    <sprite>sprites\SPR_Title</sprite>
+    <sprite>sprites\SPR_TheEnd</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\BG_Main_Menu_01</background>
@@ -141,6 +143,7 @@
       <object>objects\OBJ_Play_Button</object>
       <object>objects\OBJ_Credits_Button</object>
       <object>objects\OBJ_Exit_Button</object>
+      <object>objects\OBJ_Title</object>
     </objects>
     <objects name="OBJ_Cordell_Shop">
       <object>objects\OBJ_Shop_Controller</object>
