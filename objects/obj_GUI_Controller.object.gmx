@@ -57,6 +57,11 @@ draw_text(view_xview[view_current] + oxygen_sprite_width/4 * oxygen_sprite_xscal
 
 // cash text
 draw_text(view_xview[view_current], view_yview[view_current] + 65, "Upgrade Points: " + string(storage.Upgrade_Points));
+
+draw_sprite(SPR_Controlls, 0, view_xview[view_current] + 1200, view_yview[view_current]);
+
+draw_text(view_xview[view_current] + 1300, view_yview[view_current] + 216, "You must be touching the")
+draw_text(view_xview[view_current] + 1300, view_yview[view_current] + 236, "diving bell to use shop")
 </string>
           </argument>
         </arguments>

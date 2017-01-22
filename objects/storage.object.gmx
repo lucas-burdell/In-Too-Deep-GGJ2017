@@ -83,7 +83,7 @@ current_depth = 0
 lowest_depth = 0
 
 //max oxygen
-maximum_oxygen = 120 + (80 * Tier_Oxygen_Tank);
+maximum_oxygen = 60 + (80 * Tier_Oxygen_Tank);
 
 //current oxygen
 current_oxygen = 0
