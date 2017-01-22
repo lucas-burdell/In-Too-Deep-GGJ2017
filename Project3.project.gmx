@@ -181,6 +181,8 @@
     <object>objects\reg_level1_fish</object>
     <object>objects\reg_level3_fish</object>
     <object>objects\OBJ_Credit_Controller</object>
+    <object>objects\mission_control_dialog</object>
+    <object>objects\end_game</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\RM_Main_Menu</room>
