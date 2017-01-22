@@ -35,7 +35,7 @@ vsp = 10; //vertical speed
 
 
 //constant
-maxSpeed = 10;
+maxSpeed = 7 + (8 * storage.Tier_Flippers / 5);
 speedDecay = .1;
 facingDirection = 1
 flipping = false

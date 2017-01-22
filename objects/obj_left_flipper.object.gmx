@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///attach flipper
+image_speed = 0;
 relative_xpos = xstart - obj_diver.xstart
 relative_ypos = ystart - obj_diver.ystart
 original_xscale = image_xscale
@@ -80,6 +81,8 @@ rotating = true
 y = obj_diver.y + relative_ypos
 image_xscale = original_xscale * obj_diver.facingDirection
 
+
+image_index = storage.Tier_Flippers; // Which flipper to show
 </string>
           </argument>
         </arguments>
