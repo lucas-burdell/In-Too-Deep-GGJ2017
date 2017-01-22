@@ -92,6 +92,9 @@
     <background>background\BG_Shop</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\SCR_Fish_Collision.gml</script>
+  </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader0.shader</shader>
   </shaders>
@@ -168,6 +171,7 @@
     <object>objects\OBJ_Box</object>
     <object>objects\obj_divingbell_new</object>
     <object>objects\obj_dialog_controller</object>
+    <object>objects\OBJ_Enemy</object>
     <object>objects\main_menu_music_player</object>
   </objects>
   <rooms name="rooms">
