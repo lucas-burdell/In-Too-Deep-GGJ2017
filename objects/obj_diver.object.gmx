@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>2</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -34,16 +34,55 @@ hsp = 0; //horizontal speed
 vsp = 10; //vertical speed
 
 
-//constant
-maxSpeed = 10;
+//stats
+maxSpeed = 7 + (8 * storage.Tier_Flippers / 5);
 speedDecay = .1;
 facingDirection = 1
 flipping = false
+
+drowning = false
+drowning_sound = -1
 
 //oxygen levels
 //with (storage) {
     storage.current_oxygen = storage.maximum_oxygen;
 //}
+
+canPing = 0;
+image_speed = 0;
+image_index = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>limiter = 0;
+
+if (storage.Tier_Pressure_Suit == 0) {
+        limiter = 2800;
+
+} else if (storage.Tier_Pressure_Suit == 1) {
+        limiter = 5600;
+} else if (storage.Tier_Pressure_Suit == 2) {
+        limiter = 8200;
+} else if (storage.Tier_Pressure_Suit == 3) {
+        limiter = room_height / 3;
+}
 </string>
           </argument>
         </arguments>
@@ -85,10 +124,8 @@ delta_vsp = min(max(-maxSpeed, delta_vsp), maxSpeed)
 
 if (flipping == 0 and leftDown and facingDirection&gt;-1) {
    flipping = -1
-   show_debug_message("flipping -1")
 } else if (flipping == 0 and rightDown and facingDirection&lt;1) {
   flipping = 1
-  show_debug_message("flipping -1")
 }
 
 if (flipping == -1) {
@@ -106,19 +143,59 @@ if (flipping == -1) {
 }
 
 image_xscale = facingDirection * original_xscale
-show_debug_message("facingDirection: " + string(facingDirection))
 
 //horizontal collision checks
 
 if (x + delta_hsp) + (sprite_width / 2) &gt; room_width {
    hsp = 0
    delta_hsp = 0
+   x = room_width - (sprite_width / 2)
 //   x = room_width - (sprite_width)   
 } else if (x + delta_hsp) - (sprite_width / 2) &lt; 0 {
   hsp = 0
   delta_hsp = 0
+  x = 0 + (sprite_width / 2)
 // x = sprite_width
 }
+
+if (place_meeting(x, y, Collidable)) {
+   if (flipping != 0) {
+      x += 3 * -flipping
+   } else {
+     for (i=1;i &lt; 50; i+=5) {
+         if (!place_meeting(x + i, y, Collidable)) {
+            x = x + i
+            hsp = 0
+            delta_hsp = 0
+            vsp = 0
+            delta_vsp = 0
+            break
+         } else if (!place_meeting(x - i, y, Collidable)) {
+           x = x - i
+           hsp = 0
+           delta_hsp = 0
+           vsp = 0
+           delta_vsp = 0
+           break
+         } else if (!place_meeting(x, y - i, Collidable)) {
+           y = y - i
+           hsp = 0
+           delta_hsp = 0
+           vsp = 0
+           delta_vsp = 0
+           break
+         } else if (!place_meeting(x, y + i, Collidable)) {
+           y = y + i
+           hsp = 0
+           delta_hsp = 0
+           vsp = 0
+           delta_vsp = 0
+           break
+         }
+     }
+   }
+}
+
 
 if (place_meeting(x + delta_hsp, y, Collidable)) {
     while(!place_meeting(x + sign(delta_hsp), y, Collidable)) {
@@ -132,14 +209,14 @@ if (place_meeting(x + delta_hsp, y, Collidable)) {
 
 //vertical collision checks
 
-if (y + delta_vsp)  + (sprite_height / 2) &gt; room_height {
+if (y + delta_vsp)  + (sprite_height / 2) &gt; limiter * 3 {
    vsp = 0
    delta_vsp = 0
- //  y = room_height - (sprite_height)   
+   y = room_height - (sprite_height)   
 } else if (y + delta_vsp) - (sprite_height / 2) &lt; 0 {
   vsp = 0
   delta_vsp = 0
-//  y = sprite_height
+  y = sprite_height
 }
 
 
@@ -197,9 +274,46 @@ storage.current_depth = curdepth;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Oxygen Counter
+            <string>///Oxygen Counter
 
 storage.current_oxygen = storage.current_oxygen - (1/60);
+
+if (storage.current_oxygen &lt;= 15.5 and !drowning) {
+   drowning = true
+   audio_play_sound(snd_drowning, 20, false)
+}
+if (storage.current_oxygen &gt; 30 and drowning) {
+   if audio_exists(snd_drowning) {
+      audio_stop_sound(snd_drowning)
+   }
+   drowning = false
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///ping timer
+if (canPing &lt; 120) {
+    canPing += 1;
+}
+
+image_index = storage.Tier_Pressure_Suit;
 </string>
           </argument>
         </arguments>
@@ -219,6 +333,28 @@ storage.current_oxygen = storage.current_oxygen - (1/60);
         <whoName>other</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+storage.Upgrade_Points += 1;
+</string>
+          </argument>
+        </arguments>
       </action>
     </event>
     <event eventtype="4" ename="_chest_">
@@ -241,6 +377,91 @@ storage.current_oxygen = storage.current_oxygen - (1/60);
             <string>//increment cash
 
 storage.cash = storage.cash + 1000;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if audio_exists(snd_drowning) {
+   audio_stop_sound(snd_drowning)
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="16">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>ping_range = 500 + (125 * storage.Tier_Sonar);
+
+if (canPing &gt;= 120) {
+    with (OBJ_Pingable) {
+        if (point_distance(self.x, self.y, other.x, other.y) &lt;= obj_diver.ping_range) {
+            instance_create(self.x, self.y, obj_ping);
+            
+        }
+        
+    }
+    canPing = 1;
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="8">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (distance_to_object(obj_divingbell) &lt; 30) {
+    room_goto(RM_Shop);
+}
 </string>
           </argument>
         </arguments>

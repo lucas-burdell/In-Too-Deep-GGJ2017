@@ -25,6 +25,56 @@
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>///Shop Variables
+
+// 0 == starting value
+// 1 == upgrade
+// 2 == upgrade
+// 3 == final upgrade
+
+// Shopping Points
+Upgrade_Points = 0;
+
+// Pressure Suit
+Tier_Pressure_Suit = 0; 
+
+// Sonar System
+Tier_Sonar = 0; // Done
+
+// Flippers
+Tier_Flippers = 0; // Done
+
+// Oxygen Tank
+Tier_Oxygen_Tank = 0; // Done
+
+// Oxygen Refills
+Tier_Oxygen_Refills = 0; // NOPE
+
+// Flash Light
+Tier_Flash_Light = 0; // Done
+
+// Starting Depth
+Tier_Starting_Depth = 0; // NOPE
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>///Create game vars
 //current depth
 current_depth = 0
@@ -33,7 +83,7 @@ current_depth = 0
 lowest_depth = 0
 
 //max oxygen
-maximum_oxygen = 120
+maximum_oxygen = 120 + (60 * Tier_Oxygen_Tank / 0.2);
 
 //current oxygen
 current_oxygen = 0
