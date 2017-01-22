@@ -205,7 +205,23 @@ storage.current_oxygen = storage.current_oxygen - (1/60);
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="64">
+    <event eventtype="4" ename="Fish_Grab">
+      <action>
+        <libid>1</libid>
+        <id>203</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_kill_object</functionname>
+        <codestring></codestring>
+        <whoName>other</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+    </event>
+    <event eventtype="4" ename="_chest_">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -222,15 +238,9 @@ storage.current_oxygen = storage.current_oxygen - (1/60);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_color(make_color_rgb(255,255,255))
-draw_set_alpha(1)
-draw_text(view_xview[view_current], view_yview[view_current], "depth: " + string(storage.current_depth) + " meters");
-draw_set_color(make_color_rgb(255,255,255))
-draw_set_alpha(1)
-draw_text(view_xview[view_current], view_yview[view_current] + 16, "oxygen: " + string(storage.current_oxygen));
+            <string>//increment cash
 
-draw_rectangle(view_xview[view_current], view_yview[view_current] + 32, view_xview[view_current] + 16, view_yview[view_current] + 48, c_white);
-draw_sprite(Oxygen_HUD, 0, view_xview[view_current], view_yview[view_current] + 32);
+storage.cash = storage.cash + 1000;
 </string>
           </argument>
         </arguments>
