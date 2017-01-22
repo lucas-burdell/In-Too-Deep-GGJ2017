@@ -6,6 +6,8 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\mus_ingame</sound>
+    <sound>sound\mus_shop</sound>
+    <sound>sound\snd_drowning</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sp_diver</sprite>
@@ -86,6 +88,7 @@
     <object>objects\obj_background_color_changer</object>
     <object>objects\storage</object>
     <object>objects\ingame_music_player</object>
+    <object>objects\shop_music_player</object>
     <object>objects\obj_divingbell</object>
     <object>objects\obj_light</object>
     <object>objects\obj_ping</object>
@@ -150,8 +153,11 @@
     <object>objects\obj_GUI_Controller</object>
     <object>objects\ob_player</object>
     <object>objects\OBJ_Pingable</object>
+<<<<<<< HEAD
     <object>objects\OBJ_Box</object>
     <object>objects\obj_divingbell_new</object>
+=======
+>>>>>>> refs/remotes/origin/master
   </objects>
   <rooms name="rooms">
     <room>rooms\RM_Main_Menu</room>
