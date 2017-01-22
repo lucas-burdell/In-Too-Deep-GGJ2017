@@ -62,6 +62,7 @@ if (!displaying) {
                self.dialog_messages = idvar.messages
                      self.start = true
          }
+      global.mission_control_seen = true
    }
    instance_destroy()
 }
