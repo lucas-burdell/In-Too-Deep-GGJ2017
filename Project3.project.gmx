@@ -126,6 +126,7 @@
     <object>objects\_chest_</object>
     <object>objects\blackbox__broken</object>
     <object>objects\blackbox_</object>
+    <object>objects\blackbox_end</object>
     <object>objects\bubble_</object>
     <object>objects\coral_2_green</object>
     <object>objects\coral_2_pink</object>
@@ -183,12 +184,14 @@
     <object>objects\OBJ_Credit_Controller</object>
     <object>objects\mission_control_dialog</object>
     <object>objects\end_game</object>
+    <object>objects\obj_the_end</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\RM_Main_Menu</room>
     <room>rooms\room0</room>
     <room>rooms\RM_Shop</room>
     <room>rooms\RM_Credits</room>
+    <room>rooms\RM_TheEnd</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
