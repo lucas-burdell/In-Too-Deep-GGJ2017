@@ -64,6 +64,7 @@
     <sprite>sprites\sp_tank</sprite>
     <sprite>sprites\eel</sprite>
     <sprite>sprites\anglerfish</sprite>
+    <sprite>sprites\Oxygen_HUD</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\BG_Main_Menu_01</background>
