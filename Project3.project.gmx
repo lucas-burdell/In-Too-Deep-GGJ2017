@@ -84,6 +84,7 @@
     <sprite>sprites\sp_oxygen_meter</sprite>
     <sprite>sprites\spr_ping</sprite>
     <sprite>sprites\sp_dialog_box</sprite>
+    <sprite>sprites\SPR_Controlls</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\BG_Main_Menu_01</background>
