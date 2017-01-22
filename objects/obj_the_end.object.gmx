@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>timer = 0
 image_alpha = 0
+flip = false
 </string>
           </argument>
         </arguments>
@@ -97,10 +98,17 @@ image_alpha = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>timer += 1
-image_alpha = timer / (30 * 4)
-if (timer &gt;= 30 * 4) {
-   game_end()
+            <string>image_alpha = timer / (30 * 4)
+if (not flip) {
+   timer += 1
+} else {
+  timer += -1
+}
+
+if (timer &gt;= 30 * 4 and not flip) {
+   flip = true
+} else if (flip and timer &lt;= 0) {
+  room_goto(RM_Credits)
 }
 </string>
           </argument>
