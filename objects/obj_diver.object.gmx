@@ -40,6 +40,9 @@ speedDecay = .1;
 facingDirection = 1
 flipping = false
 
+pressure_dialog_id = noone
+
+
 drowning = false
 drowning_sound = -1
 
@@ -241,6 +244,13 @@ if (y + delta_vsp)  + (sprite_height / 2) &gt; limiter * 3 {
    vsp = 0
    delta_vsp = 0
    y = limiter * 3 - (sprite_height)   
+   if (!instance_exists(pressure_dialog_id)) {
+      pressure_dialog_id = instance_create(x, y, obj_dialog_controller)
+      with (pressure_dialog_id) {
+            dialog_messages[0] = "You need to upgrade your pressure suit to continue down."
+            start = true
+      }
+   }
 } else if (y + delta_vsp) - (sprite_height / 2) &lt; 0 {
   vsp = 0
   delta_vsp = 0
@@ -558,6 +568,7 @@ storage.Upgrade_Points += 3;
 if (canPing &gt;= pingTimer) {
 
         audio_play_sound(snd_player_sonar, 1, false)   
+        instance_create(x, y, obj_ping);
     with (OBJ_Pingable) {
         if (point_distance(self.x, self.y, other.x, other.y) &lt;= obj_diver.ping_range) {
             instance_create(self.x, self.y, obj_ping);
