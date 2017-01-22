@@ -66,6 +66,7 @@
     <sprite>sprites\anglerfish</sprite>
     <sprite>sprites\Oxygen_HUD</sprite>
     <sprite>sprites\Currency</sprite>
+    <sprite>sprites\sp_oxygen_meter</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\BG_Main_Menu_01</background>
