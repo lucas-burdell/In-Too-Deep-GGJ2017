@@ -34,6 +34,7 @@ message_scroll_counter = 1
 step_counter = 0
 scrolling = true
 start = false
+the_end = false
 music = noone
 </string>
           </argument>
@@ -205,6 +206,9 @@ scrolling = true
 if (current_message_number &gt;= array_length_1d(dialog_messages)) {
    if (audio_exists(snd_text_scroll)) {
       audio_stop_sound(snd_text_scroll)
+   }
+   if (the_end) {
+      room_goto(RM_TheEnd)
    }
    instance_destroy()
 }
