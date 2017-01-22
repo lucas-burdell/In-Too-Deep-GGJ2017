@@ -8,6 +8,17 @@
     <sound>sound\mus_ingame</sound>
     <sound>sound\mus_shop</sound>
     <sound>sound\snd_drowning</sound>
+    <sound>sound\snd_text_scroll</sound>
+    <sound>sound\snd_bubbles</sound>
+    <sound>sound\snd_flashlight</sound>
+    <sound>sound\snd_item_find</sound>
+    <sound>sound\mus_menu</sound>
+    <sound>sound\snd_player_sonar</sound>
+    <sound>sound\snd_sonar_recieve</sound>
+    <sound>sound\snd_static</sound>
+    <sound>sound\snd_text</sound>
+    <sound>sound\snd_whale</sound>
+    <sound>sound\snd_whale2</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sp_diver</sprite>
@@ -72,6 +83,7 @@
     <sprite>sprites\Currency</sprite>
     <sprite>sprites\sp_oxygen_meter</sprite>
     <sprite>sprites\spr_ping</sprite>
+    <sprite>sprites\sp_dialog_box</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\BG_Main_Menu_01</background>
@@ -80,6 +92,9 @@
     <background>background\BG_Shop</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\SCR_Fish_Collision.gml</script>
+  </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader0.shader</shader>
   </shaders>
@@ -155,6 +170,9 @@
     <object>objects\OBJ_Pingable</object>
     <object>objects\OBJ_Box</object>
     <object>objects\obj_divingbell_new</object>
+    <object>objects\obj_dialog_controller</object>
+    <object>objects\OBJ_Enemy</object>
+    <object>objects\main_menu_music_player</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\RM_Main_Menu</room>

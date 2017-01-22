@@ -48,9 +48,6 @@ drowning_sound = -1
     storage.current_oxygen = storage.maximum_oxygen;
 //}
 
-canPing = 0;
-image_speed = 0;
-image_index = 0;
 </string>
           </argument>
         </arguments>
@@ -71,7 +68,9 @@ image_index = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>limiter = 0;
+            <string>///Pressure Suit limiter
+// In meters (NOT px)
+limiter = 0; // Default (not used)
 
 if (storage.Tier_Pressure_Suit == 0) {
         limiter = 2800;
@@ -83,6 +82,35 @@ if (storage.Tier_Pressure_Suit == 0) {
 } else if (storage.Tier_Pressure_Suit == 3) {
         limiter = room_height / 3;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Initial Item Statuses
+
+image_speed = 0; // Remove subimaging animation
+
+image_index = storage.Tier_Pressure_Suit; // Which pressure suit on spawn
+
+pingTimer = 120 - (90 * storage.Tier_Sonar / 4);
+
+canPing = pingTimer; // Sonar timer
 </string>
           </argument>
         </arguments>
@@ -212,7 +240,7 @@ if (place_meeting(x + delta_hsp, y, Collidable)) {
 if (y + delta_vsp)  + (sprite_height / 2) &gt; limiter * 3 {
    vsp = 0
    delta_vsp = 0
-   y = room_height - (sprite_height)   
+   y = limiter * 3 - (sprite_height)   
 } else if (y + delta_vsp) - (sprite_height / 2) &lt; 0 {
   vsp = 0
   delta_vsp = 0
@@ -309,31 +337,18 @@ if (storage.current_oxygen &gt; 30 and drowning) {
           <argument>
             <kind>1</kind>
             <string>///ping timer
-if (canPing &lt; 120) {
+if (canPing &lt; pingTimer) {
     canPing += 1;
 }
 
 image_index = storage.Tier_Pressure_Suit;
+
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="Fish_Grab">
-      <action>
-        <libid>1</libid>
-        <id>203</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_kill_object</functionname>
-        <codestring></codestring>
-        <whoName>other</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
+    <event eventtype="4" ename="OBJ_Enemy">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -350,11 +365,62 @@ image_index = storage.Tier_Pressure_Suit;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>storage.current_oxygen -= 30;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>203</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_kill_object</functionname>
+        <codestring></codestring>
+        <whoName>other</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+    </event>
+    <event eventtype="4" ename="Fish_Grab">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Get an Upgrade Point
 storage.Upgrade_Points += 1;
 </string>
           </argument>
         </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>203</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_kill_object</functionname>
+        <codestring></codestring>
+        <whoName>other</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
     <event eventtype="4" ename="_chest_">
@@ -374,12 +440,25 @@ storage.Upgrade_Points += 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//increment cash
-
-storage.cash = storage.cash + 1000;
+            <string>/// Get 3 Upgrade Points
+storage.Upgrade_Points += 3;
 </string>
           </argument>
         </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>203</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_kill_object</functionname>
+        <codestring></codestring>
+        <whoName>other</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
     <event eventtype="7" enumb="5">
@@ -407,7 +486,7 @@ storage.cash = storage.cash + 1000;
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="16">
+    <event eventtype="9" enumb="70">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -426,15 +505,18 @@ storage.cash = storage.cash + 1000;
             <kind>1</kind>
             <string>ping_range = 500 + (125 * storage.Tier_Sonar);
 
-if (canPing &gt;= 120) {
+if (canPing &gt;= pingTimer) {
+
+        audio_play_sound(snd_player_sonar, 1, false)   
     with (OBJ_Pingable) {
         if (point_distance(self.x, self.y, other.x, other.y) &lt;= obj_diver.ping_range) {
             instance_create(self.x, self.y, obj_ping);
             
         }
-        
     }
     canPing = 1;
+    show_debug_message("reset canPing");
+    show_debug_message(pingTimer);
 }
 
 </string>
@@ -442,7 +524,7 @@ if (canPing &gt;= 120) {
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="8">
+    <event eventtype="9" enumb="69">
       <action>
         <libid>1</libid>
         <id>603</id>
