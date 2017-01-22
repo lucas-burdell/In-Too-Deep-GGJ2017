@@ -61,6 +61,7 @@
       <sprite>sprites\SPR_Text_Upgrade</sprite>
       <sprite>sprites\SPR_Shop_Sign</sprite>
     </sprites>
+    <sprite>sprites\sp_tank</sprite>
     <sprite>sprites\eel</sprite>
     <sprite>sprites\anglerfish</sprite>
   </sprites>
@@ -131,6 +132,8 @@
       <object>objects\OBJ_Upgrade_Depth</object>
       <object>objects\OBJ_Sign</object>
     </objects>
+    <object>objects\attach_to_player</object>
+    <object>objects\obj_tank_1</object>
     <object>objects\anglerfish_</object>
     <object>objects\eel_</object>
   </objects>
