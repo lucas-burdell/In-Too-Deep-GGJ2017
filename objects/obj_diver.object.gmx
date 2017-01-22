@@ -240,7 +240,7 @@ if (place_meeting(x + delta_hsp, y, Collidable)) {
 if (y + delta_vsp)  + (sprite_height / 2) &gt; limiter * 3 {
    vsp = 0
    delta_vsp = 0
-   y = room_height - (sprite_height)   
+   y = limiter * 3 - (sprite_height)   
 } else if (y + delta_vsp) - (sprite_height / 2) &lt; 0 {
   vsp = 0
   delta_vsp = 0

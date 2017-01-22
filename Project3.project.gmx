@@ -8,6 +8,7 @@
     <sound>sound\mus_ingame</sound>
     <sound>sound\mus_shop</sound>
     <sound>sound\snd_drowning</sound>
+    <sound>sound\snd_text_scroll</sound>
     <sound>sound\snd_bubbles</sound>
     <sound>sound\snd_flashlight</sound>
     <sound>sound\snd_item_find</sound>
@@ -82,6 +83,7 @@
     <sprite>sprites\Currency</sprite>
     <sprite>sprites\sp_oxygen_meter</sprite>
     <sprite>sprites\spr_ping</sprite>
+    <sprite>sprites\sp_dialog_box</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\BG_Main_Menu_01</background>
@@ -168,6 +170,7 @@
     <object>objects\OBJ_Pingable</object>
     <object>objects\OBJ_Box</object>
     <object>objects\obj_divingbell_new</object>
+    <object>objects\obj_dialog_controller</object>
     <object>objects\OBJ_Enemy</object>
     <object>objects\main_menu_music_player</object>
   </objects>
