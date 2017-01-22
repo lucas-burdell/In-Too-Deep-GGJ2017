@@ -58,7 +58,7 @@
     <instance objName="obj_diver" x="2432" y="384" name="inst_9B0FC547" locked="0" code="" scaleX="0.444794952869415" scaleY="0.572463750839233" colour="4294967295" rotation="0"/>
     <instance objName="obj_light" x="2496" y="416" name="inst_0AEAAFA6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="rock_2" x="256" y="3040" name="inst_D3392A2D" locked="0" code="" scaleX="1.99363052845001" scaleY="1.08823525905609" colour="4294967295" rotation="0"/>
-    <instance objName="rock_2" x="4640" y="10944" name="inst_E908AD9B" locked="0" code="" scaleX="1.11252653598785" scaleY="3.67647051811218" colour="4294967295" rotation="0"/>
+    <instance objName="rock_2" x="4576" y="11040" name="inst_E908AD9B" locked="0" code="" scaleX="1.11252653598785" scaleY="3.67647051811218" colour="4294967295" rotation="0"/>
     <instance objName="rock_2" x="1248" y="14048" name="inst_1189F678" locked="0" code="" scaleX="2.94479823112488" scaleY="2.02941179275513" colour="4294967295" rotation="0"/>
     <instance objName="rock_2" x="3552" y="10528" name="inst_B6070665" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="300"/>
     <instance objName="rock_2" x="4160" y="15264" name="inst_827D0685" locked="0" code="" scaleX="3.01273894309998" scaleY="1.32352936267853" colour="4294967295" rotation="0"/>
@@ -80,7 +80,7 @@
     <instance objName="rock_1" x="960" y="3680" name="inst_092908C7" locked="0" code="" scaleX="2.07264947891235" scaleY="0.876470565795898" colour="4294967295" rotation="0"/>
     <instance objName="rock_3" x="4352" y="14720" name="inst_A1F9BB27" locked="0" code="" scaleX="3.77619051933289" scaleY="3.96987962722778" colour="4294967295" rotation="0"/>
     <instance objName="rock_3" x="736" y="14976" name="inst_1B1A298B" locked="0" code="" scaleX="5.98571443557739" scaleY="6.09000015258789" colour="4294967295" rotation="0"/>
-    <instance objName="rock_3" x="4160" y="9600" name="inst_1874D557" locked="0" code="" scaleX="3.62380957603455" scaleY="8.88554191589355" colour="4294967295" rotation="0"/>
+    <instance objName="rock_3" x="4160" y="9696" name="inst_1874D557" locked="0" code="" scaleX="3.62380957603455" scaleY="8.88554191589355" colour="4294967295" rotation="0"/>
     <instance objName="rock_3" x="640" y="9024" name="inst_EF8A72AE" locked="0" code="" scaleX="5.92999982833862" scaleY="8.08157062530518" colour="4294967295" rotation="0"/>
     <instance objName="rock_3" x="608" y="3712" name="inst_AEEAD700" locked="0" code="" scaleX="4.2802848815918" scaleY="4.81571006774902" colour="4294967295" rotation="0"/>
     <instance objName="rock_3" x="576" y="4992" name="inst_33EB2358" locked="0" code="" scaleX="4.61428594589233" scaleY="7.43975925445557" colour="4294967295" rotation="0"/>
@@ -88,9 +88,9 @@
     <instance objName="rock_3" x="608" y="21408" name="inst_BD510E59" locked="0" code="" scaleX="7.3600001335144" scaleY="8.21084308624268" colour="4294967295" rotation="0"/>
     <instance objName="rock_3" x="4448" y="4960" name="inst_3FD89821" locked="0" code="" scaleX="4.23333311080933" scaleY="7.82530117034912" colour="4294967295" rotation="0"/>
     <instance objName="rock_4" x="512" y="7648" name="inst_1C9496DA" locked="0" code="" scaleX="5.26302719116211" scaleY="3.51886796951294" colour="4294967295" rotation="0"/>
-    <instance objName="rock_4" x="4096" y="10944" name="inst_AF7E94E3" locked="0" code="" scaleX="2.56575679779053" scaleY="3.367924451828" colour="4294967295" rotation="300"/>
+    <instance objName="rock_4" x="4032" y="11008" name="inst_AF7E94E3" locked="0" code="" scaleX="2.56575679779053" scaleY="3.367924451828" colour="4294967295" rotation="300"/>
     <instance objName="rock_4" x="4736" y="8544" name="inst_EB21E42F" locked="0" code="" scaleX="2.32506203651428" scaleY="2.00943398475647" colour="4294967295" rotation="300"/>
-    <instance objName="rock_4" x="224" y="20064" name="inst_C60F8558" locked="0" code="" scaleX="4.07196044921875" scaleY="1.25471699237823" colour="4294967295" rotation="0"/>
+    <instance objName="rock_4" x="160" y="20032" name="inst_C60F8558" locked="0" code="" scaleX="4.07196044921875" scaleY="1.25471699237823" colour="4294967295" rotation="0"/>
     <instance objName="rock_4" x="1728" y="14528" name="inst_1D4D789E" locked="0" code="" scaleX="4.46999979019165" scaleY="2.16037726402283" colour="4294967295" rotation="300"/>
     <instance objName="rock_4" x="4160" y="17792" name="inst_508A5E40" locked="0" code="" scaleX="3.44000005722046" scaleY="3.97169804573059" colour="4294967295" rotation="0"/>
     <instance objName="rock_4" x="4256" y="18560" name="inst_DFC2727C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -147,22 +147,22 @@
     <instance objName="fish_1_gold" x="1184" y="21536" name="inst_25265D26" locked="0" code="" scaleX="0.2392638027668" scaleY="0.300000011920929" colour="4294967295" rotation="0"/>
     <instance objName="_chest_" x="1376" y="21920" name="inst_DDAC5FB9" locked="0" code="" scaleX="0.431623935699463" scaleY="0.415584415197372" colour="4294967295" rotation="0"/>
     <instance objName="_chest_" x="4672" y="15040" name="inst_F752DE1A" locked="0" code="" scaleX="0.5" scaleY="0.501298725605011" colour="4294967295" rotation="0"/>
-    <instance objName="_chest_" x="4704" y="10400" name="inst_5496A1B5" locked="0" code="" scaleX="0.246252670884132" scaleY="0.229381442070007" colour="4294967295" rotation="0"/>
+    <instance objName="_chest_" x="4320" y="10688" name="inst_5496A1B5" locked="0" code="" scaleX="0.246252670884132" scaleY="0.229381442070007" colour="4294967295" rotation="0"/>
     <instance objName="_chest_" x="608" y="3584" name="inst_569C9AF0" locked="0" code="" scaleX="0.455128192901611" scaleY="0.334196895360947" colour="4294967295" rotation="0"/>
     <instance objName="blackbox_" x="832" y="2688" name="inst_989B75BC" locked="0" code="" scaleX="0.314000010490417" scaleY="0.379999995231628" colour="4294967295" rotation="0"/>
-    <instance objName="blackbox_" x="1344" y="25376" name="inst_4FCA5771" locked="0" code="" scaleX="0.691999971866608" scaleY="0.691999971866608" colour="4294967295" rotation="0"/>
+    <instance objName="blackbox_" x="3616" y="23872" name="inst_4FCA5771" locked="0" code="" scaleX="0.691999971866608" scaleY="0.691999971866608" colour="4294967295" rotation="0"/>
     <instance objName="blackbox_" x="1376" y="14944" name="inst_BD099124" locked="0" code="" scaleX="0.5" scaleY="0.691999971866608" colour="4294967295" rotation="0"/>
     <instance objName="blackbox_" x="4256" y="5984" name="inst_C8EBE44E" locked="0" code="" scaleX="0.435999989509583" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="blackbox_" x="992" y="5056" name="inst_D5955055" locked="0" code="" scaleX="0.435999989509583" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="blackbox_" x="2464" y="30368" name="inst_406739B3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="blackbox_" x="448" y="8896" name="inst_C46CBA4F" locked="0" code="" scaleX="0.435999989509583" scaleY="0.628000020980835" colour="4294967295" rotation="0"/>
-    <instance objName="blackbox_" x="928" y="28192" name="inst_0C2E3CD4" locked="0" code="" scaleX="0.628000020980835" scaleY="0.691999971866608" colour="4294967295" rotation="0"/>
-    <instance objName="rock_1" x="1280" y="25664" name="inst_9B5F373C" locked="0" code="" scaleX="1.66239321231842" scaleY="1.44117641448975" colour="4294967295" rotation="0"/>
-    <instance objName="rock_1" x="928" y="28448" name="inst_45FBDE93" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blackbox_" x="2208" y="26976" name="inst_0C2E3CD4" locked="0" code="" scaleX="0.628000020980835" scaleY="0.691999971866608" colour="4294967295" rotation="340"/>
+    <instance objName="rock_1" x="3584" y="24192" name="inst_9B5F373C" locked="0" code="" scaleX="1.66239321231842" scaleY="1.44117641448975" colour="4294967295" rotation="0"/>
     <instance objName="rock_1" x="2464" y="30592" name="inst_F086E202" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_diver" x="5952" y="22592" name="inst_4D945D1A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_diver" x="7872" y="22784" name="inst_76B7DE7E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_diver" x="8736" y="22944" name="inst_0C8805B1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="anglerfish_" x="1120" y="18240" name="inst_5E9640B6" locked="0" code="" scaleX="0.88400000333786" scaleY="0.759999990463257" colour="4294967295" rotation="0"/>
+    <instance objName="eel_" x="2816" y="15296" name="inst_8B3CA9D3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="eel_" x="1568" y="24064" name="inst_A133CF61" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="anglerfish_" x="3744" y="25792" name="inst_63561237" locked="0" code="" scaleX="0.88400000333786" scaleY="0.819999992847443" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
