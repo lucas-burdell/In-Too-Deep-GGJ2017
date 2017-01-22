@@ -65,6 +65,7 @@
     <sprite>sprites\eel</sprite>
     <sprite>sprites\anglerfish</sprite>
     <sprite>sprites\Oxygen_HUD</sprite>
+    <sprite>sprites\Currency</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\BG_Main_Menu_01</background>
@@ -137,6 +138,8 @@
     <object>objects\obj_tank_1</object>
     <object>objects\anglerfish_</object>
     <object>objects\eel_</object>
+    <object>objects\Fish_Grab</object>
+    <object>objects\obj_GUI_Controller</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\RM_Main_Menu</room>
