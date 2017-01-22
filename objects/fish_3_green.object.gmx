@@ -11,33 +11,58 @@
     <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
-        <id>119</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_path</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>8</kind>
-            <path>fish_path_two</path>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>2</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>1</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
+            <kind>1</kind>
+            <string>///varibles
+//timer
+timer = 0
+//direction
+right = 0
+rightUp = 38
+up = 90
+leftUp = 155
+left = 180
+leftDown = 200
+down = 270
+downRight = 330
+
+//Speed of fish
+setSpeed = 3
+reverseSpeed = 6
+
+//counter
+counter = 1
+startYPos = ystart
+
+//depth Change
+testMaxHeight = (startYPos + 1500)
+if(testMaxHeight &gt;= room_height){
+    maxHeight = room_height
+    } else if(testMaxHeight &lt;= room_height){
+    maxHeight = testMaxHeight
+    } 
+testMinHeight =(startYPos - 1500)
+if(testMinHeight &lt;= 0){
+    minHeight = 0
+    } else if(testMinHeight &gt;= 0){
+    minHeight = testMinHeight
+    }
+
+
+
+</string>
           </argument>
         </arguments>
       </action>
@@ -60,6 +85,90 @@
           <argument>
             <kind>1</kind>
             <string>storage.cash = storage.cash + 250;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///fishy movements
+if(timer == 0){
+motion_add(right, setSpeed)
+} 
+
+if(x &lt;= 10 or x &gt;= (room_width-10)){
+    if(x &lt;= 10){ 
+        motion_set(right, 5)
+       
+        } else if(x &gt;= (room_width-10)){
+        motion_set(left, 5)
+       
+        }
+    }    
+
+if(y &lt;= (minHeight+15) or y &gt;= (maxHeight-15)){
+     if(y &gt;= (minHeight+15)){ 
+        motion_set(rightUp, 5)
+    
+        } else if(y &lt;= (maxHeight-15)) {
+        motion_set(leftDown, 5)
+     
+        }
+    } 
+
+if((timer % random_range(70, 180)) == 0){
+    if(counter == 1){
+    random_range(1, 8)
+    motion_set(rightUp,0)
+    motion_add(rightUp,5)
+    
+    } else if(counter == 4){
+    random_range(1, 8)
+    motion_set(right,0)
+    motion_add(right,4)
+    
+    }else if(counter == 6){
+    random_range(1, 8)
+    motion_set(leftDown,0)
+    motion_add(leftDown,3)
+           
+    }else if(counter == 2){
+    random_range(1, 8)
+    motion_set(downRight,0)
+    motion_add(downRight,3.4)
+    
+    }else if(counter == 7){
+    random_range(1, 8)
+    motion_set(left,0)
+    motion_add(left,4.6)
+    
+    }else if(counter == 3){
+    random_range(1, 8)
+    motion_set(leftUp,0)
+    motion_add(leftUp,2.5)
+    
+    }
+    
+}    
+    
+    
+timer += 1    
 </string>
           </argument>
         </arguments>
