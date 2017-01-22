@@ -26,6 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>///varibles
+oldx = 0
+original_xscale = image_xscale
+//flipping -1 left 1 right
+flipping = 0
 //timer
 timer = 0
 //direction
@@ -85,6 +89,9 @@ if(testMinHeight &lt;= 0){
           <argument>
             <kind>1</kind>
             <string>///fishy movements
+
+
+//moevment code
 if(timer == 0){
 motion_add(right, setSpeed)
 } 
@@ -109,34 +116,34 @@ if(y &lt;= (minHeight+15) or y &gt;= (maxHeight-15)){
         }
     } 
 
-if((timer % random_range(70, 180)) == 0){
-    if(counter == 1){
-    random_range(1, 8)
+if(((timer * 3) % 400) == 0){
+    if(counter == 1 or counter == 9){
+    random_range(1, 14)
     motion_set(rightUp,0)
     motion_add(rightUp,5)
     
-    } else if(counter == 4){
-    random_range(1, 8)
+    } else if(counter == 4 or counter == 10){
+    random_range(1, 14)
     motion_set(right,0)
     motion_add(right,4)
     
-    }else if(counter == 6){
-    random_range(1, 8)
+    }else if(counter == 6 or counter == 11){
+    random_range(1, 14)
     motion_set(leftDown,0)
     motion_add(leftDown,3)
            
-    }else if(counter == 2){
-    random_range(1, 8)
+    }else if(counter == 2 or counter == 12){
+    random_range(1,14)
     motion_set(downRight,0)
     motion_add(downRight,3.4)
     
-    }else if(counter == 7){
-    random_range(1, 8)
+    }else if(counter == 7 or counter == 13){
+    random_range(1, 14)
     motion_set(left,0)
     motion_add(left,4.6)
     
-    }else if(counter == 3){
-    random_range(1, 8)
+    }else if(counter == 3 or counter == 14){
+    random_range(1, 14)
     motion_set(leftUp,0)
     motion_add(leftUp,2.5)
     
@@ -145,7 +152,47 @@ if((timer % random_range(70, 180)) == 0){
 }    
     
     
-timer += 1  
+timer += 1   
+
+if(timer &gt;=1000){
+timer = 1
+} 
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///flipping of fishy
+currentx = 0
+currentx += x
+
+if((currentx - oldx) &lt;= 0){
+//going left
+flipping = 1
+image_xscale = original_xscale 
+} else if((currentx - oldx) &gt;= 0){
+//going right
+flipping = -1
+image_xscale = (-1 * original_xscale)
+}
+oldx = currentx
+
+
 </string>
           </argument>
         </arguments>
