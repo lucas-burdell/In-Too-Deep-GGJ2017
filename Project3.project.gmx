@@ -61,6 +61,7 @@
       <sprite>sprites\SPR_Text_Upgrade</sprite>
       <sprite>sprites\SPR_Shop_Sign</sprite>
       <sprite>sprites\SPR_Shop_Status</sprite>
+      <sprite>sprites\SPR_Shop_Dive</sprite>
     </sprites>
     <sprite>sprites\sp_tank</sprite>
     <sprite>sprites\eel</sprite>
@@ -132,7 +133,6 @@
       <object>objects\OBJ_Upgrade_Light</object>
       <object>objects\OBJ_Upgrade_Depth</object>
       <object>objects\OBJ_Sign</object>
-      <object>objects\OBJ_Temp_Controller</object>
       <object>objects\OBJ_Shop_Suit</object>
       <object>objects\OBJ_Shop_Sonar</object>
       <object>objects\OBJ_Shop_Flippers</object>
@@ -140,6 +140,7 @@
       <object>objects\OBJ_Shop_Refills</object>
       <object>objects\OBJ_Shop_Light</object>
       <object>objects\OBJ_Shop_Depth</object>
+      <object>objects\OBJ_Shop_Dive</object>
     </objects>
     <object>objects\attach_to_player</object>
     <object>objects\obj_tank_1</object>
@@ -150,6 +151,7 @@
     <object>objects\ob_player</object>
     <object>objects\OBJ_Pingable</object>
     <object>objects\OBJ_Box</object>
+    <object>objects\obj_divingbell_new</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\RM_Main_Menu</room>

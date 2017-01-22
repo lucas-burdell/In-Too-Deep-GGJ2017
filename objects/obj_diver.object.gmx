@@ -46,6 +46,8 @@ flipping = false
 //}
 
 canPing = 0;
+image_speed = 0;
+image_index = 0;
 </string>
           </argument>
         </arguments>
@@ -202,8 +204,9 @@ storage.current_oxygen = storage.current_oxygen - (1/60);
 
 if (canPing &lt; 120) {
     canPing += 1;
-    show_debug_message("this happened");
 }
+
+image_index = storage.Tier_Pressure_Suit;
 </string>
           </argument>
         </arguments>
@@ -223,6 +226,28 @@ if (canPing &lt; 120) {
         <whoName>other</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+storage.Upgrade_Points += 1;
+</string>
+          </argument>
+        </arguments>
       </action>
     </event>
     <event eventtype="4" ename="_chest_">
@@ -280,6 +305,31 @@ if (canPing % 120 == 0) {
     canPing = 1;
 }
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="8">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (distance_to_object(obj_divingbell) &lt; 30) {
+    room_goto(RM_Shop);
+}
 </string>
           </argument>
         </arguments>
