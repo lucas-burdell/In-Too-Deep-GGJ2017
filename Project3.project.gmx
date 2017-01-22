@@ -7,6 +7,7 @@
   <sounds name="sound">
     <sound>sound\mus_ingame</sound>
     <sound>sound\mus_shop</sound>
+    <sound>sound\snd_drowning</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sp_diver</sprite>
