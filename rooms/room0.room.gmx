@@ -167,7 +167,6 @@
     <instance objName="fish_3_red" x="3392" y="1984" name="inst_165C34C6" locked="0" code="" scaleX="0.25363826751709" scaleY="0.204419896006584" colour="4294967295" rotation="0"/>
     <instance objName="fish_1_red" x="1728" y="1184" name="inst_23C8DB90" locked="0" code="" scaleX="0.153374239802361" scaleY="0.14241486787796" colour="4294967295" rotation="0"/>
     <instance objName="obj_GUI_Controller" x="96" y="0" name="inst_818DDD0C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="&lt;undefined&gt;" x="128" y="0" name="inst_53CF0E76" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="_chest_" x="4256" y="18416" name="inst_CDD787BF" locked="0" code="" scaleX="0.211538463830948" scaleY="0.238461539149284" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
