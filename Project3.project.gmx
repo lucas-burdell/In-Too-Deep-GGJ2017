@@ -67,11 +67,8 @@
     <sprite>sprites\anglerfish</sprite>
     <sprite>sprites\Oxygen_HUD</sprite>
     <sprite>sprites\Currency</sprite>
-<<<<<<< HEAD
     <sprite>sprites\sp_oxygen_meter</sprite>
-=======
     <sprite>sprites\spr_ping</sprite>
->>>>>>> refs/remotes/origin/master
   </sprites>
   <backgrounds name="background">
     <background>background\BG_Main_Menu_01</background>

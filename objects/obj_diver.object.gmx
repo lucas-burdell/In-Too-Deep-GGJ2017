@@ -198,16 +198,12 @@ storage.current_depth = curdepth;
             <kind>1</kind>
             <string>///Oxygen Counter
 
-<<<<<<< HEAD
-storage.current_oxygen = storage.current_oxygen - (1/10);
-=======
 storage.current_oxygen = storage.current_oxygen - (1/60);
 
 if (canPing &lt; 120) {
     canPing += 1;
     show_debug_message("this happened");
 }
->>>>>>> refs/remotes/origin/master
 </string>
           </argument>
         </arguments>
