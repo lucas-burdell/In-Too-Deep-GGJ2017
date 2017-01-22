@@ -32,6 +32,7 @@
         image_index = 2;
         if (mouse_check_button_pressed(mb_left) &amp;&amp; storage.Tier_Oxygen_Tank &lt; 3 &amp;&amp; storage.Upgrade_Points &gt; storage.Tier_Oxygen_Tank) {
             storage.Tier_Oxygen_Tank += 1;
+            storage.maximum_oxygen = 60 + (80 * storage.Tier_Oxygen_Tank);
             storage.Upgrade_Points -= storage.Tier_Oxygen_Tank;
         }
     }
