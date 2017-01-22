@@ -25,10 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Initialize Backround Constants
-alpha = 0
-depthThreshold = 3000
-color = make_color_rgb(0, 200, 255)
+            <string>///attach flipper
+relative_xpos = xstart - obj_diver.xstart
+relative_ypos = ystart - obj_diver.ystart
+original_xscale = image_xscale
+
+
 </string>
           </argument>
         </arguments>
@@ -51,13 +53,10 @@ color = make_color_rgb(0, 200, 255)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Changing background color
-max_alpha = 1
-min_alpha = .1
+            <string>x = obj_diver.x + relative_xpos * obj_diver.facingDirection
+y = obj_diver.y + relative_ypos
+image_xscale = original_xscale * obj_diver.facingDirection
 
-alpha = max(min(1 - (obj_diver.y  / depthThreshold), max_alpha), min_alpha);
-color = make_color_rgb(0, 200 * alpha, 255 * alpha);
-background_color = color
 </string>
           </argument>
         </arguments>

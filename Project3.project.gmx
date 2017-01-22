@@ -61,6 +61,7 @@
       <sprite>sprites\SPR_Text_Upgrade</sprite>
       <sprite>sprites\SPR_Shop_Sign</sprite>
     </sprites>
+    <sprite>sprites\sp_tank</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\BG_Main_Menu_01</background>
@@ -125,6 +126,8 @@
       <object>objects\OBJ_Upgrade_Depth</object>
       <object>objects\OBJ_Sign</object>
     </objects>
+    <object>objects\attach_to_player</object>
+    <object>objects\obj_tank_1</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\RM_Main_Menu</room>

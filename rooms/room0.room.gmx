@@ -160,6 +160,7 @@
     <instance objName="rock_1" x="1280" y="25664" name="inst_9B5F373C" locked="0" code="" scaleX="1.66239321231842" scaleY="1.44117641448975" colour="4294967295" rotation="0"/>
     <instance objName="rock_1" x="928" y="28448" name="inst_45FBDE93" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="rock_1" x="3072" y="30688" name="inst_F086E202" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_tank_1" x="2434" y="380" name="inst_8D96787D" locked="0" code="" scaleX="0.150000005960464" scaleY="0.190476194024086" colour="4294967295" rotation="20"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
