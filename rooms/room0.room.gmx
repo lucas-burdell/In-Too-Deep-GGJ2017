@@ -155,6 +155,7 @@
     <instance objName="blackbox_" x="4256" y="5984" name="inst_C8EBE44E" locked="0" code="" scaleX="0.435999989509583" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="blackbox_" x="992" y="5056" name="inst_D5955055" locked="0" code="" scaleX="0.435999989509583" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="blackbox_" x="2464" y="30368" name="inst_406739B3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_tank_1" x="2434" y="380" name="inst_8D96787D" locked="0" code="" scaleX="0.150000005960464" scaleY="0.190476194024086" colour="4294967295" rotation="20"/>
     <instance objName="blackbox_" x="448" y="8896" name="inst_C46CBA4F" locked="0" code="" scaleX="0.435999989509583" scaleY="0.628000020980835" colour="4294967295" rotation="0"/>
     <instance objName="blackbox_" x="2208" y="26976" name="inst_0C2E3CD4" locked="0" code="" scaleX="0.628000020980835" scaleY="0.691999971866608" colour="4294967295" rotation="340"/>
     <instance objName="rock_1" x="3584" y="24192" name="inst_9B5F373C" locked="0" code="" scaleX="1.66239321231842" scaleY="1.44117641448975" colour="4294967295" rotation="0"/>
