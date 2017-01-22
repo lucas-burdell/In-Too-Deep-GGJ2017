@@ -44,6 +44,8 @@ flipping = false
 //with (storage) {
     storage.current_oxygen = storage.maximum_oxygen;
 //}
+
+canPing = 0;
 </string>
           </argument>
         </arguments>
@@ -200,6 +202,11 @@ storage.current_depth = curdepth;
             <string>//Oxygen Counter
 
 storage.current_oxygen = storage.current_oxygen - (1/60);
+
+if (canPing &lt; 120) {
+    canPing += 1;
+    show_debug_message("this happened");
+}
 </string>
           </argument>
         </arguments>
@@ -241,6 +248,41 @@ storage.current_oxygen = storage.current_oxygen - (1/60);
             <string>//increment cash
 
 storage.cash = storage.cash + 1000;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="16">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>ping_range = 500 + (125 * storage.Tier_Sonar);
+
+if (canPing % 120 == 0) {
+    with (OBJ_Pingable) {
+        if (point_distance(self.x, self.y, other.x, other.y) &lt;= obj_diver.ping_range) {
+            instance_create(self.x, self.y, obj_ping);
+            
+        }
+        
+    }
+    canPing = 1;
+}
+
 </string>
           </argument>
         </arguments>

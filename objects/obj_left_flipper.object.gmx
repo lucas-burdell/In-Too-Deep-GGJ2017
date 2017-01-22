@@ -3,7 +3,7 @@
   <spriteName>sp_flipper_1</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>2</depth>
+  <depth>1</depth>
   <persistent>0</persistent>
   <parentName>attach_to_player</parentName>
   <maskName>&lt;undefined&gt;</maskName>
