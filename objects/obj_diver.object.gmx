@@ -117,12 +117,53 @@ image_xscale = facingDirection * original_xscale
 if (x + delta_hsp) + (sprite_width / 2) &gt; room_width {
    hsp = 0
    delta_hsp = 0
+   x = room_width - (sprite_width / 2)
 //   x = room_width - (sprite_width)   
 } else if (x + delta_hsp) - (sprite_width / 2) &lt; 0 {
   hsp = 0
   delta_hsp = 0
+  x = 0 + (sprite_width / 2)
 // x = sprite_width
 }
+
+if (place_meeting(x, y, Collidable)) {
+   if (flipping != 0) {
+      x += 3 * -flipping
+   } else {
+     for (i=1;i &lt; 50; i+=5) {
+         if (!place_meeting(x + i, y, Collidable)) {
+            x = x + i
+            hsp = 0
+            delta_hsp = 0
+            vsp = 0
+            delta_vsp = 0
+            break
+         } else if (!place_meeting(x - i, y, Collidable)) {
+           x = x - i
+           hsp = 0
+           delta_hsp = 0
+           vsp = 0
+           delta_vsp = 0
+           break
+         } else if (!place_meeting(x, y - i, Collidable)) {
+           y = y - i
+           hsp = 0
+           delta_hsp = 0
+           vsp = 0
+           delta_vsp = 0
+           break
+         } else if (!place_meeting(x, y + i, Collidable)) {
+           y = y + i
+           hsp = 0
+           delta_hsp = 0
+           vsp = 0
+           delta_vsp = 0
+           break
+         }
+     }
+   }
+}
+
 
 if (place_meeting(x + delta_hsp, y, Collidable)) {
     while(!place_meeting(x + sign(delta_hsp), y, Collidable)) {
@@ -139,11 +180,11 @@ if (place_meeting(x + delta_hsp, y, Collidable)) {
 if (y + delta_vsp)  + (sprite_height / 2) &gt; room_height {
    vsp = 0
    delta_vsp = 0
- //  y = room_height - (sprite_height)   
+   y = room_height - (sprite_height)   
 } else if (y + delta_vsp) - (sprite_height / 2) &lt; 0 {
   vsp = 0
   delta_vsp = 0
-//  y = sprite_height
+  y = sprite_height
 }
 
 
