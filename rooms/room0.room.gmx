@@ -152,7 +152,7 @@
     <instance objName="blackbox_" x="832" y="2688" name="inst_989B75BC" locked="0" code="" scaleX="0.100000001490116" scaleY="0.150000005960464" colour="4294967295" rotation="0"/>
     <instance objName="blackbox_" x="3600" y="23925" name="inst_4FCA5771" locked="0" code="" scaleX="0.17399999499321" scaleY="0.25" colour="4294967295" rotation="0"/>
     <instance objName="blackbox_" x="1280" y="14992" name="inst_BD099124" locked="0" code="" scaleX="0.153999999165535" scaleY="0.270000010728836" colour="4294967295" rotation="0"/>
-    <instance objName="blackbox_" x="4240" y="6032" name="inst_C8EBE44E" locked="0" code="" scaleX="0.153999999165535" scaleY="0.238000005483627" colour="4294967295" rotation="0"/>
+    <instance objName="blackbox_" x="4240" y="6032" name="inst_C8EBE44E" locked="0" code="messages[0] = &quot;Lost contact with the rig a few meters up. Control warned me that this could happen, but it still seems strange, to be out here all alone. It’s so quiet.&quot;&#xA;" scaleX="0.153999999165535" scaleY="0.238000005483627" colour="4294967295" rotation="0"/>
     <instance objName="blackbox_" x="992" y="5088" name="inst_D5955055" locked="0" code="" scaleX="0.122000001370907" scaleY="0.17399999499321" colour="4294967295" rotation="0"/>
     <instance objName="blackbox_" x="2496" y="30410" name="inst_406739B3" locked="0" code="" scaleX="0.178000003099442" scaleY="0.208000004291534" colour="4294967295" rotation="0"/>
     <instance objName="obj_tank_1" x="2443" y="243" name="inst_8D96787D" locked="0" code="" scaleX="0.150000005960464" scaleY="0.190476194024086" colour="4294967295" rotation="20"/>
@@ -167,7 +167,6 @@
     <instance objName="fish_3_red" x="3392" y="1984" name="inst_165C34C6" locked="0" code="" scaleX="0.25363826751709" scaleY="0.204419896006584" colour="4294967295" rotation="0"/>
     <instance objName="fish_1_red" x="1728" y="1184" name="inst_23C8DB90" locked="0" code="" scaleX="0.153374239802361" scaleY="0.14241486787796" colour="4294967295" rotation="0"/>
     <instance objName="obj_GUI_Controller" x="96" y="0" name="inst_818DDD0C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="&lt;undefined&gt;" x="128" y="0" name="inst_53CF0E76" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="_chest_" x="4256" y="18416" name="inst_CDD787BF" locked="0" code="" scaleX="0.211538463830948" scaleY="0.238461539149284" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
