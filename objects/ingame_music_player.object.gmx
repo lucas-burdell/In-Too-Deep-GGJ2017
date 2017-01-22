@@ -32,7 +32,7 @@ music = audio_play_sound(mus_ingame, 10, true)
         </arguments>
       </action>
     </event>
-    <event eventtype="1" enumb="0">
+    <event eventtype="7" enumb="5">
       <action>
         <libid>1</libid>
         <id>603</id>

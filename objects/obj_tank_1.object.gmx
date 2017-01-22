@@ -3,7 +3,7 @@
   <spriteName>sp_tank</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -30,6 +30,7 @@ relative_xpos = xstart - obj_diver.xstart
 relative_ypos = ystart - obj_diver.ystart
 original_xscale = image_xscale
 original_rotation = image_angle
+image_speed = 0;
 </string>
           </argument>
         </arguments>
@@ -56,6 +57,7 @@ original_rotation = image_angle
 y = obj_diver.y + relative_ypos
 image_xscale = original_xscale * obj_diver.facingDirection
 image_angle = original_rotation * obj_diver.facingDirection
+image_index = storage.Tier_Oxygen_Tank;
 </string>
           </argument>
         </arguments>

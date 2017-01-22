@@ -87,7 +87,7 @@ if (surface_exists(surf)) {
 surface_set_target(surf);
 draw_clear_alpha(c_black, 1 - obj_background_color_changer.alpha);
 draw_set_blend_mode(bm_subtract);
-draw_sprite_ext(SPR_Light, 0, x - view_xview, y - view_yview, 1, 1, point_direction(x, y, mouse_x, mouse_y), c_black, 1 - obj_background_color_changer.alpha);
+draw_sprite_ext(SPR_Light, 0, x - view_xview, y - view_yview, 1 + (0.3 * storage.Tier_Flash_Light), 1 + (0.8 * storage.Tier_Flash_Light), point_direction(x, y, mouse_x, mouse_y), c_black, 1 - obj_background_color_changer.alpha);
 draw_sprite_ext(sp_diver_light_outline, 0,obj_diver.x - view_xview, obj_diver.y - view_yview, obj_diver.image_xscale, obj_diver.image_yscale, 0, c_black, 1 - obj_background_color_changer.alpha);
 
 draw_set_color(c_white);

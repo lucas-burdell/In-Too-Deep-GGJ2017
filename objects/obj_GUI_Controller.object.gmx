@@ -27,15 +27,36 @@
             <kind>1</kind>
             <string>draw_set_color(make_color_rgb(255,255,255))
 draw_set_alpha(1)
-draw_text(view_xview[view_current], view_yview[view_current], "depth: " + string(storage.current_depth) + " meters");
-draw_set_color(make_color_rgb(255,255,255))
-draw_set_alpha(1)
-draw_text(view_xview[view_current], view_yview[view_current] + 16, "oxygen: " + string(storage.current_oxygen));
 
-draw_rectangle(view_xview[view_current], view_yview[view_current] + 32, view_xview[view_current] + 16, view_yview[view_current] + 48, c_white);
-draw_sprite(Oxygen_HUD, 0, view_xview[view_current], view_yview[view_current] + 32);
-draw_sprite(Currency, 0, view_xview[view_current], view_yview[view_current] + 96);
-draw_text(view_xview[view_current] + 64, view_yview[view_current] + 96, "oxygen: " + string(storage.cash));
+// depth counter text
+draw_text(view_xview[view_current], view_yview[view_current], "depth: " + string(storage.current_depth) + " meters");
+
+// oxygen percentage
+
+var oxygen_sprite_height = 120 // stupid gamemaker
+var oxygen_sprite_width = 365 // stupid gamemaker
+
+var oxygen_sprite_pref_height = 32
+var oxygen_sprite_pref_width = 164
+
+var oxygen_sprite_yscale = oxygen_sprite_pref_height / oxygen_sprite_height
+var oxygen_sprite_xscale = oxygen_sprite_pref_width / oxygen_sprite_width
+
+
+draw_sprite_ext(sp_oxygen_meter, 0, view_xview[view_current] + 3, view_yview[view_current] + 16 + 4, min(1, max(0, storage.current_oxygen / storage.maximum_oxygen)) * oxygen_sprite_xscale, oxygen_sprite_yscale,0, c_white, .85)
+
+// oxygen hud
+draw_sprite_ext(Oxygen_HUD, 0, view_xview[view_current] + oxygen_sprite_width/2 * oxygen_sprite_xscale + 5, view_yview[view_current] + 16 + oxygen_sprite_height/2 * oxygen_sprite_yscale + 4, oxygen_sprite_xscale, oxygen_sprite_yscale, 0, c_white, .85)
+
+// oxygen text
+
+draw_text(view_xview[view_current] + oxygen_sprite_width/4 * oxygen_sprite_xscale, view_yview[view_current] + 16 + oxygen_sprite_height/4 * oxygen_sprite_yscale + 4, "oxygen");
+
+// cash sprite
+//draw_sprite(Currency, 0, view_xview[view_current], view_yview[view_current] + 96);
+
+// cash text
+draw_text(view_xview[view_current] + 64, view_yview[view_current] + 16 + oxygen_sprite_height + 16, "cash: " + string(storage.cash));
 </string>
           </argument>
         </arguments>

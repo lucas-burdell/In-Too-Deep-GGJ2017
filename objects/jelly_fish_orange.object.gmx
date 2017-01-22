@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>OBJ_Pingable</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -84,25 +84,25 @@ endCycle = (firstChange + P + L + Z)
 if(timer == Start &amp;&amp; cycleIndicators == start){
 motion_add(up, StartSpeed)
 cycleIndicators = one
-show_debug_message(timer)
+
 } 
 
  if(timer == Start &amp;&amp; cycleIndicators == Repeat){
  motion_add(up, ChangeOne)
 cycleIndicators = one
-show_debug_message(timer)
+
 } else if(timer == firstChange &amp;&amp; cycleIndicators == one){
 motion_add(down, ChangeOne)
 cycleIndicators = two
-show_debug_message(timer)
+
 } else if(timer == secondChange &amp;&amp; cycleIndicators == two){
 motion_add(up, ChangeTwo)
 cycleIndicators = three
-show_debug_message(timer)
+
 } else if(timer == thirdChange &amp;&amp; cycleIndicators == three){
 motion_add(up, ChangeThree)
 cycleIndicators = Repeat
-show_debug_message(timer)
+
 }
 timer += 1
 if(timer == endCycle){
