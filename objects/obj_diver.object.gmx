@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>2</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -34,11 +34,14 @@ hsp = 0; //horizontal speed
 vsp = 10; //vertical speed
 
 
-//constant
+//stats
 maxSpeed = 7 + (8 * storage.Tier_Flippers / 5);
 speedDecay = .1;
 facingDirection = 1
 flipping = false
+
+drowning = false
+drowning_sound = -1
 
 //oxygen levels
 //with (storage) {
@@ -200,9 +203,39 @@ storage.current_depth = curdepth;
 
 storage.current_oxygen = storage.current_oxygen - (1/60);
 
+if (storage.current_oxygen &lt;= 15.5 and !drowning) {
+   drowning = true
+   audio_play_sound(snd_drowning, 20, false)
+}
+if (storage.current_oxygen &gt; 30 and drowning) {
+   if audio_exists(snd_drowning) {
+      audio_stop_sound(snd_drowning)
+   }
+   drowning = false
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///ping timer
 if (canPing &lt; 120) {
     canPing += 1;
-    show_debug_message("this happened");
 }
 </string>
           </argument>
@@ -250,6 +283,31 @@ storage.cash = storage.cash + 1000;
         </arguments>
       </action>
     </event>
+    <event eventtype="7" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if audio_exists(snd_drowning) {
+   audio_stop_sound(snd_drowning)
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="9" enumb="16">
       <action>
         <libid>1</libid>
@@ -269,7 +327,7 @@ storage.cash = storage.cash + 1000;
             <kind>1</kind>
             <string>ping_range = 500 + (125 * storage.Tier_Sonar);
 
-if (canPing % 120 == 0) {
+if (canPing &gt;= 120) {
     with (OBJ_Pingable) {
         if (point_distance(self.x, self.y, other.x, other.y) &lt;= obj_diver.ping_range) {
             instance_create(self.x, self.y, obj_ping);
