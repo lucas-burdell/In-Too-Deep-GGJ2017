@@ -340,6 +340,9 @@ if (storage.current_oxygen &gt; 30 and drowning) {
 if (canPing &lt; pingTimer) {
     canPing += 1;
 }
+
+image_index = storage.Tier_Pressure_Suit;
+
 </string>
           </argument>
         </arguments>
@@ -483,7 +486,7 @@ storage.Upgrade_Points += 3;
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="16">
+    <event eventtype="9" enumb="70">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -503,12 +506,13 @@ storage.Upgrade_Points += 3;
             <string>ping_range = 500 + (125 * storage.Tier_Sonar);
 
 if (canPing &gt;= pingTimer) {
+
+        audio_play_sound(snd_player_sonar, 1, false)   
     with (OBJ_Pingable) {
         if (point_distance(self.x, self.y, other.x, other.y) &lt;= obj_diver.ping_range) {
             instance_create(self.x, self.y, obj_ping);
             
         }
-        
     }
     canPing = 1;
     show_debug_message("reset canPing");
@@ -520,7 +524,7 @@ if (canPing &gt;= pingTimer) {
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="8">
+    <event eventtype="9" enumb="69">
       <action>
         <libid>1</libid>
         <id>603</id>
