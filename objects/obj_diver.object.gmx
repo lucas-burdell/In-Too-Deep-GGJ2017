@@ -316,6 +316,11 @@ if (storage.current_oxygen &gt; 30 and drowning) {
    }
    drowning = false
 }
+
+if (storage.current_oxygen &lt;= 0 and drowning) {
+   storage.Upgrade_Points = 0
+   room_goto(RM_Shop)
+}
 </string>
           </argument>
         </arguments>

@@ -173,6 +173,8 @@
     <object>objects\obj_dialog_controller</object>
     <object>objects\OBJ_Enemy</object>
     <object>objects\main_menu_music_player</object>
+    <object>objects\reg_level1_fish</object>
+    <object>objects\reg_level3_fish</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\RM_Main_Menu</room>
