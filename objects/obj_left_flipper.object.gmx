@@ -3,9 +3,9 @@
   <spriteName>sp_flipper_1</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>2</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>attach_to_player</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -28,8 +28,30 @@
             <string>///attach flipper
 relative_xpos = xstart - obj_diver.xstart
 relative_ypos = ystart - obj_diver.ystart
+original_xscale = image_xscale
 
-// timer
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// timer
 timer = 0
 rotating = true
 </string>
@@ -54,13 +76,35 @@ rotating = true
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x = obj_diver.x + relative_xpos
+            <string>x = obj_diver.x + relative_xpos * obj_diver.facingDirection
 y = obj_diver.y + relative_ypos
+image_xscale = original_xscale * obj_diver.facingDirection
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///animation
 if (rotating) {
-   timer += 1
+   timer += 1 + (5 * (max(abs(obj_diver.hsp), abs(obj_diver.vsp)) / obj_diver.maxSpeed))
 } else {
-  timer += -1
+  timer += -1 + (-5 * (max(abs(obj_diver.hsp), abs(obj_diver.vsp)) / obj_diver.maxSpeed))
 }
 
 if (timer &lt;= 0 and !rotating) {
@@ -69,7 +113,7 @@ if (timer &lt;= 0 and !rotating) {
   rotating = not rotating
 }
 
-image_angle = -30 * (timer / 60)
+image_angle = -30 * (timer / 60) * sign(obj_diver.facingDirection)
 
 </string>
           </argument>

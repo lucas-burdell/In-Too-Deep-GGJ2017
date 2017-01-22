@@ -26,6 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>///init variables
+
+// original scale
+original_xscale = image_xscale
+
 hsp = 0; //horizontal speed
 vsp = 10; //vertical speed
 
@@ -33,6 +37,8 @@ vsp = 10; //vertical speed
 //constant
 maxSpeed = 10;
 speedDecay = .1;
+facingDirection = 1
+flipping = false
 
 //oxygen levels
 //with (storage) {
@@ -76,6 +82,31 @@ delta_hsp = min(max(-maxSpeed, delta_hsp), maxSpeed)
 delta_vsp = (wDown * -1) + sDown + vsp;
 delta_vsp = delta_vsp - (sign(delta_vsp) * speedDecay  * (1 - (wDown or sDown)))
 delta_vsp = min(max(-maxSpeed, delta_vsp), maxSpeed)
+
+if (flipping == 0 and leftDown and facingDirection&gt;-1) {
+   flipping = -1
+   show_debug_message("flipping -1")
+} else if (flipping == 0 and rightDown and facingDirection&lt;1) {
+  flipping = 1
+  show_debug_message("flipping -1")
+}
+
+if (flipping == -1) {
+   facingDirection = max(-1, facingDirection + flipping / 10)   
+   if (facingDirection &lt;= -1) {
+      facingDirection = -1
+      flipping = 0
+   }
+} else if (flipping == 1) {
+   facingDirection = min(1, facingDirection + flipping / 10)   
+   if (facingDirection &gt;= 1) {
+      facingDirection = 1
+      flipping = 0
+   }
+}
+
+image_xscale = facingDirection * original_xscale
+show_debug_message("facingDirection: " + string(facingDirection))
 
 //horizontal collision checks
 
