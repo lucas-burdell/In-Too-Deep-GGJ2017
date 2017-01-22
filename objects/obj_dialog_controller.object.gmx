@@ -60,7 +60,7 @@ music = noone
             <kind>1</kind>
             <string>///Play text sound
 if (scrolling and !audio_exists(music)) {
-   music = audio_play_sound_at(snd_text_scroll, obj_diver.x, obj_diver.y + 100, 2, 100, 100, 1, true, 2)
+   music = audio_play_sound_at(snd_text_scroll, obj_diver.x, obj_diver.y + 100, 1, 100, 100, 1, true, 2)
 } else if (!scrolling and audio_exists(music)) {
   audio_stop_sound(music)
 }
