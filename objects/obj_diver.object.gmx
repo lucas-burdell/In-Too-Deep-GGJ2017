@@ -314,6 +314,7 @@ if (canPing &lt; 120) {
 }
 
 image_index = storage.Tier_Pressure_Suit;
+
 </string>
           </argument>
         </arguments>
@@ -407,7 +408,7 @@ storage.cash = storage.cash + 1000;
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="16">
+    <event eventtype="9" enumb="70">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -427,12 +428,13 @@ storage.cash = storage.cash + 1000;
             <string>ping_range = 500 + (125 * storage.Tier_Sonar);
 
 if (canPing &gt;= 120) {
+
+        audio_play_sound(snd_player_sonar, 1, false)   
     with (OBJ_Pingable) {
         if (point_distance(self.x, self.y, other.x, other.y) &lt;= obj_diver.ping_range) {
             instance_create(self.x, self.y, obj_ping);
             
         }
-        
     }
     canPing = 1;
 }
@@ -442,7 +444,7 @@ if (canPing &gt;= 120) {
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="8">
+    <event eventtype="9" enumb="69">
       <action>
         <libid>1</libid>
         <id>603</id>

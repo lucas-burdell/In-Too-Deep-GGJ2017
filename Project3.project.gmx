@@ -9,6 +9,16 @@
     <sound>sound\mus_shop</sound>
     <sound>sound\snd_drowning</sound>
     <sound>sound\snd_text_scroll</sound>
+    <sound>sound\snd_bubbles</sound>
+    <sound>sound\snd_flashlight</sound>
+    <sound>sound\snd_item_find</sound>
+    <sound>sound\mus_menu</sound>
+    <sound>sound\snd_player_sonar</sound>
+    <sound>sound\snd_sonar_recieve</sound>
+    <sound>sound\snd_static</sound>
+    <sound>sound\snd_text</sound>
+    <sound>sound\snd_whale</sound>
+    <sound>sound\snd_whale2</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sp_diver</sprite>
@@ -158,6 +168,7 @@
     <object>objects\OBJ_Box</object>
     <object>objects\obj_divingbell_new</object>
     <object>objects\obj_dialog_controller</object>
+    <object>objects\main_menu_music_player</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\RM_Main_Menu</room>
