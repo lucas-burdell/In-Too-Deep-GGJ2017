@@ -86,7 +86,7 @@
     <instance objName="rock_3" x="576" y="4992" name="inst_33EB2358" locked="0" code="" scaleX="4.61428594589233" scaleY="7.43975925445557" colour="4294967295" rotation="0"/>
     <instance objName="rock_3" x="4224" y="18656" name="inst_3782A4D4" locked="0" code="" scaleX="4.15714263916016" scaleY="5.31927728652954" colour="4294967295" rotation="0"/>
     <instance objName="rock_3" x="608" y="21408" name="inst_BD510E59" locked="0" code="" scaleX="7.3600001335144" scaleY="8.21084308624268" colour="4294967295" rotation="0"/>
-    <instance objName="rock_3" x="4448" y="4960" name="inst_3FD89821" locked="0" code="" scaleX="4.23333311080933" scaleY="7.82530117034912" colour="4294967295" rotation="0"/>
+    <instance objName="rock_3" x="4448" y="4944" name="inst_3FD89821" locked="0" code="" scaleX="4.23333311080933" scaleY="7.82530117034912" colour="4294967295" rotation="0"/>
     <instance objName="rock_4" x="512" y="7648" name="inst_1C9496DA" locked="0" code="" scaleX="5.26302719116211" scaleY="3.51886796951294" colour="4294967295" rotation="0"/>
     <instance objName="rock_4" x="4032" y="11008" name="inst_AF7E94E3" locked="0" code="" scaleX="2.56575679779053" scaleY="3.367924451828" colour="4294967295" rotation="300"/>
     <instance objName="rock_4" x="4736" y="8544" name="inst_EB21E42F" locked="0" code="" scaleX="2.32506203651428" scaleY="2.00943398475647" colour="4294967295" rotation="300"/>
@@ -133,13 +133,11 @@
     <instance objName="jelly_fish_green" x="3328" y="4256" name="inst_B8BC2629" locked="0" code="" scaleX="0.252077549695969" scaleY="0.23275862634182" colour="4294967295" rotation="0"/>
     <instance objName="jelly_fish_orange" x="3072" y="10112" name="inst_A90FF48E" locked="0" code="" scaleX="0.439999997615814" scaleY="0.44612067937851" colour="4294967295" rotation="0"/>
     <instance objName="jelly_fish_pink" x="2304" y="19104" name="inst_E2028A05" locked="0" code="" scaleX="0.678670346736908" scaleY="0.568965494632721" colour="4294967295" rotation="0"/>
-    <instance objName="fish_3_red" x="1024" y="448" name="inst_D49251E6" locked="0" code="" scaleX="0.182773113250732" scaleY="0.191860467195511" colour="4294967295" rotation="0"/>
     <instance objName="fish_3_red" x="4256" y="4416" name="inst_8AD12C2D" locked="0" code="" scaleX="0.161425575613976" scaleY="0.159420296549797" colour="4294967295" rotation="0"/>
     <instance objName="fish_3_green" x="3744" y="7104" name="inst_E477263F" locked="0" code="" scaleX="0.241596639156342" scaleY="0.252906978130341" colour="4294967295" rotation="0"/>
     <instance objName="fish_3_green" x="1248" y="11456" name="inst_ADC9DA92" locked="0" code="" scaleX="0.182773113250732" scaleY="0.191860467195511" colour="4294967295" rotation="0"/>
     <instance objName="fish_3_blue" x="864" y="16864" name="inst_A2E6190F" locked="0" code="" scaleX="0.350104808807373" scaleY="0.284883707761765" colour="4294967295" rotation="0"/>
     <instance objName="fish_3_blue" x="3872" y="19744" name="inst_4264253F" locked="0" code="" scaleX="0.384453773498535" scaleY="0.331395357847214" colour="4294967295" rotation="0"/>
-    <instance objName="fish_1_red" x="4160" y="896" name="inst_D9635EB0" locked="0" code="" scaleX="0.1083844602108" scaleY="0.0900321528315544" colour="4294967295" rotation="0"/>
     <instance objName="fish_1_red" x="992" y="4096" name="inst_CDB90984" locked="0" code="" scaleX="0.2392638027668" scaleY="0.192926049232483" colour="4294967295" rotation="0"/>
     <instance objName="fish_1_purple" x="4288" y="8832" name="inst_858D18A3" locked="0" code="" scaleX="0.12065439671278" scaleY="0.146496817469597" colour="4294967295" rotation="0"/>
     <instance objName="fish_1_purple" x="640" y="9536" name="inst_B75B0B0C" locked="0" code="" scaleX="0.2392638027668" scaleY="0.192926049232483" colour="4294967295" rotation="0"/>
@@ -161,13 +159,18 @@
     <instance objName="eel_" x="2816" y="15296" name="inst_8B3CA9D3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="eel_" x="1568" y="24064" name="inst_A133CF61" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="anglerfish_" x="3744" y="25792" name="inst_63561237" locked="0" code="" scaleX="0.88400000333786" scaleY="0.819999992847443" colour="4294967295" rotation="0"/>
-    <instance objName="fish_3_red" x="3392" y="1984" name="inst_165C34C6" locked="0" code="" scaleX="0.25363826751709" scaleY="0.204419896006584" colour="4294967295" rotation="0"/>
-    <instance objName="fish_1_red" x="1728" y="1184" name="inst_23C8DB90" locked="0" code="" scaleX="0.153374239802361" scaleY="0.14241486787796" colour="4294967295" rotation="0"/>
     <instance objName="obj_GUI_Controller" x="96" y="0" name="inst_818DDD0C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="_chest_" x="4256" y="18416" name="inst_CDD787BF" locked="0" code="" scaleX="0.211538463830948" scaleY="0.238461539149284" colour="4294967295" rotation="0"/>
     <instance objName="blackbox_" x="3600" y="23936" name="inst_5EDDCF9B" locked="0" code="messages[0] = &quot;Lost in the dark... &quot;&#xA;messages[1] = &quot;*STATIC*&quot;&#xA;messages[2] = &quot;HQ not responding..&quot;&#xA;messages[3] = &quot;*STATIC*&quot;&#xA;&#xA;&#xA;" scaleX="0.178000003099442" scaleY="0.208000004291534" colour="4294967295" rotation="0"/>
     <instance objName="blackbox_" x="944" y="13808" name="inst_002234A5" locked="0" code="messages[0] = &quot;Maybe they haven’t lost connection with me… Maybe this is all a test. They won’t let me die down here. I mean I’ve been here for months, I’ve been faithful to my mission. They wouldn’t just abandon me, they wouldn’t just leave me...&quot;&#xA;" scaleX="0.178000003099442" scaleY="0.208000004291534" colour="4294967295" rotation="0"/>
     <instance objName="blackbox_" x="560" y="9856" name="inst_3BEBB7AC" locked="0" code="/*&#xA;Is anyone listening?! Pull me back up, please! There’s something down here, I-I can see something through the window. Oh god-- Please! Pull me up! Are you listening to me? PULL ME UP!&#xA;*/&#xA;&#xA;messages[0] = &quot;Is anyone listening?! Pull me back up, please! There’s something down here, I-I can see something through the window. Oh god-- Please! Pull me up! Are you listening to me? PULL ME UP!&quot;&#xA;messages[1] = &quot;*STATIC*&quot;&#xA;" scaleX="0.178000003099442" scaleY="0.208000004291534" colour="4294967295" rotation="0"/>
+    <instance objName="reg_level1_fish" x="2432" y="1360" name="inst_96FEA572" locked="0" code="" scaleX="8.93469429016113" scaleY="6.83922815322876" colour="4294967295" rotation="0"/>
+    <instance objName="reg_level3_fish" x="2576" y="5728" name="inst_D54CE213" locked="0" code="" scaleX="7.76890754699707" scaleY="17.9797096252441" colour="4294967295" rotation="0"/>
+    <instance objName="reg_level1_fish" x="2688" y="7376" name="inst_9D408FAA" locked="0" code="" scaleX="8.93469429016113" scaleY="6.83922815322876" colour="4294967295" rotation="0"/>
+    <instance objName="reg_level3_fish" x="2880" y="11904" name="inst_6B569625" locked="0" code="" scaleX="7.76890754699707" scaleY="17.9797096252441" colour="4294967295" rotation="0"/>
+    <instance objName="reg_level3_fish" x="2576" y="20288" name="inst_1765556D" locked="0" code="" scaleX="7.76890754699707" scaleY="17.9797096252441" colour="4294967295" rotation="0"/>
+    <instance objName="reg_level3_fish" x="3536" y="15840" name="inst_A3B56250" locked="0" code="" scaleX="7.76890754699707" scaleY="17.9797096252441" colour="4294967295" rotation="0"/>
+    <instance objName="reg_level1_fish" x="2400" y="9600" name="inst_41914A74" locked="0" code="" scaleX="8.93469429016113" scaleY="6.83922815322876" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
