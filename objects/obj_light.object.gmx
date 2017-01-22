@@ -53,7 +53,7 @@ surface_reset_target();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x = obj_diver.x + relative_xpos;
+            <string>x = obj_diver.x + relative_xpos * obj_diver.facingDirection;
 y = obj_diver.y + relative_ypos;
 </string>
           </argument>
