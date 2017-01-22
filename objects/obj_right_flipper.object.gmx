@@ -118,7 +118,7 @@ if (timer &lt;= 0 and !rotating) {
   rotating = not rotating
 }
 
-image_angle = (30 * (timer / 60) + 5) * sign(obj_diver.facingDirection)
+image_angle = -45 * sign(obj_diver.facingDirection) + (30 * (timer / 60) + 5) * sign(obj_diver.facingDirection)
 
 
 </string>
