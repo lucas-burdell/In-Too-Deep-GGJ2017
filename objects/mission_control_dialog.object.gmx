@@ -56,10 +56,12 @@ messages[0] = "this is screen 1"
 var idvar = id
 if (!displaying) {
    displaying = true
-   dialog = instance_create(x, y,obj_dialog_controller)
-   with (dialog) {
-      self.dialog_messages = idvar.messages
-      self.start = true
+   if (!global.mission_control_seen) {
+      dialog = instance_create(x, y,obj_dialog_controller)
+         with (dialog) {
+               self.dialog_messages = idvar.messages
+                     self.start = true
+         }
    }
    instance_destroy()
 }
