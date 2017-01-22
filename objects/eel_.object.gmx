@@ -5,9 +5,202 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>OBJ_Pingable</parentName>
+  <parentName>OBJ_Enemy</parentName>
   <maskName>&lt;undefined&gt;</maskName>
-  <events/>
+  <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///varibles
+oldx = 0
+original_xscale = image_xscale
+//flipping -1 left 1 right
+flipping = 0
+//timer
+timer = 0
+//direction
+right = 0
+rightUp = 38
+up = 90
+leftUp = 155
+left = 180
+leftDown = 200
+down = 270
+downRight = 330
+
+//Speed of fish
+setSpeed = 3
+reverseSpeed = 6
+
+//counter
+counter = 1
+startYPos = ystart
+
+//depth Change
+testMaxHeight = (startYPos + 1500)
+if(testMaxHeight &gt;= room_height){
+    maxHeight = room_height
+    } else if(testMaxHeight &lt;= room_height){
+    maxHeight = testMaxHeight
+    } 
+testMinHeight =(startYPos - 1500)
+if(testMinHeight &lt;= 0){
+    minHeight = 0
+    } else if(testMinHeight &gt;= 0){
+    minHeight = testMinHeight
+    }
+//tarcking varibles
+range = 200
+diverx = obj_diver.x
+divery = obj_diver.y
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///tracking player movement
+if(timer == 0){
+motion_add(right, setSpeed)
+} 
+
+if(x &lt;= 10 or x &gt;= (room_width-10)){
+    if(x &lt;= 10){ 
+        motion_set(right, 5)
+       
+        } else if(x &gt;= (room_width-10)){
+        motion_set(left, 5)
+       
+        }
+    }    
+
+if(y &lt;= (minHeight+15) or y &gt;= (maxHeight-15)){
+     if(y &gt;= (minHeight+15)){ 
+        motion_set(rightUp, 5)
+    
+        } else if(y &lt;= (maxHeight-15)) {
+        motion_set(leftDown, 5)
+     
+        }
+    } 
+    
+    
+if(distance_to_object((obj_diver)) &lt; range){
+    move_towards_point(obj_diver.x, obj_diver.y, 3.5)
+    } else if(((timer * 3) % 400) == 0){
+    if(counter == 1 or counter == 9){
+    random_range(1, 14)
+    motion_set(rightUp,0)
+    motion_add(rightUp,5)
+    
+    } else if(counter == 4 or counter == 10){
+    random_range(1, 14)
+    motion_set(right,0)
+    motion_add(right,4)
+    
+    }else if(counter == 6 or counter == 11){
+    random_range(1, 14)
+    motion_set(leftDown,0)
+    motion_add(leftDown,3)
+           
+    }else if(counter == 2 or counter == 12){
+    random_range(1,14)
+    motion_set(downRight,0)
+    motion_add(downRight,3.4)
+    
+    }else if(counter == 7 or counter == 13){
+    random_range(1, 14)
+    motion_set(left,0)
+    motion_add(left,4.6)
+    
+    }else if(counter == 3 or counter == 14){
+    random_range(1, 14)
+    motion_set(leftUp,0)
+    motion_add(leftUp,2.5)
+    
+    }
+    
+}   
+
+timer += 1   
+
+if(timer &gt;=1000){
+timer = 1
+}  
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///flipping of fishy
+currentx = 0
+currentx += x
+
+if((currentx - oldx) &lt;= 0){
+//going left
+flipping = 1
+image_xscale = original_xscale 
+} else if((currentx - oldx) &gt;= 0){
+//going right
+flipping = -1
+image_xscale = (-1 * original_xscale)
+}
+oldx = currentx
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>
