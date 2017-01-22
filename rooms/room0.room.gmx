@@ -10,7 +10,7 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code></code>
+  <code>global.mission_control_seen = false</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -150,7 +150,6 @@
     <instance objName="blackbox_" x="4512" y="9344" name="inst_BD099124" locked="0" code="messages[0] = &quot;Finding more aggressive fish, why didn’t they tell me about these? I don’t have the right equipment for this. They should have told me about these fish.&quot;&#xA;" scaleX="0.153999999165535" scaleY="0.270000010728836" colour="4294967295" rotation="0"/>
     <instance objName="blackbox_" x="1040" y="5088" name="inst_C8EBE44E" locked="0" code="messages[0] = &quot;Lost contact with the rig a few meters up. Control warned me that this could happen, but it still seems strange, to be out here all alone. It’s so quiet.&quot;&#xA;" scaleX="0.153999999165535" scaleY="0.238000005483627" colour="4294967295" rotation="0"/>
     <instance objName="blackbox_" x="832" y="2704" name="inst_D5955055" locked="0" code="messages[1] = &quot;I’m sorry they never made it back, but, well, accidents happen…&quot;&#xA;messages[0] = &quot;*STATIC*&quot;&#xA;" scaleX="0.122000001370907" scaleY="0.17399999499321" colour="4294967295" rotation="0"/>
-    <instance objName="blackbox_" x="2480" y="30400" name="inst_406739B3" locked="0" code="/*&#xA;“At desired depth, all’s clear. No fish at this depth.” &#xA;Static, Sonar pings &#xA;“No signals on radar.” &#xA;*/&#xA;&#xA;messages[0] = &quot;At desired depth, all's clear. No fish at this depth.&quot;&#xA;messages[1] = &quot;*STATIC*&quot;&#xA;messages[2] = &quot;*SONAR PINGS*&quot;&#xA;messages[3] = &quot;No signals on radar.&quot;&#xA;messages[4] = &quot;*FRANTIC SONAR PINGS*&quot;&#xA;messages[5] = &quot;It's so peaceful here.&quot;&#xA;" scaleX="0.178000003099442" scaleY="0.208000004291534" colour="4294967295" rotation="0"/>
     <instance objName="obj_tank_1" x="2443" y="243" name="inst_8D96787D" locked="0" code="" scaleX="0.150000005960464" scaleY="0.190476194024086" colour="4294967295" rotation="20"/>
     <instance objName="blackbox_" x="4208" y="6032" name="inst_C46CBA4F" locked="0" code="/*&#xA;&quot;I picked up a shape on my sonar in the distance, I’m going to get closer to check it out.” &#xA;Burst of static. &#xA;“What? Uh, that’s, that’s a lot bigger now…. I’m heading back to the rig--!” &#xA;more static.&#xA;*/&#xA;&#xA;messages[0] = &quot;I picked up a shape on my sonar in the distance, I’m going to get closer to check it out.&quot;&#xA;messages[1] = &quot;*BURST OF STATIC*&quot;&#xA;messages[2] = &quot;What? Uh, that’s, that’s a lot bigger now…. I’m heading back to the rig--!&quot;&#xA;messages[3] = &quot;*MORE STATIC*&quot;&#xA;&#xA;&#xA;" scaleX="0.122000001370907" scaleY="0.17399999499321" colour="4294967295" rotation="1"/>
     <instance objName="rock_1" x="3584" y="24192" name="inst_9B5F373C" locked="0" code="" scaleX="1.66239321231842" scaleY="1.44117641448975" colour="4294967295" rotation="0"/>
@@ -175,6 +174,7 @@
     <instance objName="jelly_fish_orange" x="1472" y="1104" name="inst_FD43DA27" locked="0" code="" scaleX="0.545706391334534" scaleY="0.637931048870087" colour="4294967295" rotation="0"/>
     <instance objName="fish_1_purple" x="2768" y="624" name="inst_CD8B4186" locked="0" code="" scaleX="0.3701431453228" scaleY="0.349999994039536" colour="4294967295" rotation="0"/>
     <instance objName="fish_1_gold" x="3824" y="1376" name="inst_621D1CE4" locked="0" code="" scaleX="0.3047034740448" scaleY="0.239999994635582" colour="4294967295" rotation="0"/>
+    <instance objName="blackbox_end" x="2464" y="30368" name="inst_4F9A6E70" locked="0" code="/*&#xA;“At desired depth, all’s clear. No fish at this depth.” &#xA;Static, Sonar pings &#xA;“No signals on radar.” &#xA;*/&#xA;&#xA;messages[0] = &quot;At desired depth, all's clear. No fish at this depth.&quot;&#xA;messages[1] = &quot;*STATIC*&quot;&#xA;messages[2] = &quot;*SONAR PINGS*&quot;&#xA;messages[3] = &quot;No signals on radar.&quot;&#xA;messages[4] = &quot;*FRANTIC SONAR PINGS*&quot;&#xA;messages[5] = &quot;It's so peaceful here.&quot;&#xA;" scaleX="0.30799999833107" scaleY="0.372000008821487" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
