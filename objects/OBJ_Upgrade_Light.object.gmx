@@ -25,14 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (OBJ_Shop_Controller.buyable_light == true) {
+            <string>
+
+if (OBJ_Shop_Controller.buyable_light == true) {
     image_index = 1;
     
     if (position_meeting(mouse_x, mouse_y, self)) {
         image_index = 2;
-        if (mouse_check_button_pressed(mb_left) &amp;&amp; storage.Tier_Flash_Light &lt; 3 &amp;&amp; storage.Upgrade_Points &gt; 0) {
+        if (mouse_check_button_pressed(mb_left) &amp;&amp; storage.Tier_Flash_Light &lt; 3 &amp;&amp; storage.Upgrade_Points &gt; storage.Tier_Flash_Light) {
             storage.Tier_Flash_Light += 1;
-            storage.Upgrade_Points -= 1;
+            storage.Upgrade_Points -= storage.Tier_Flash_Light;
         }
     }
     
