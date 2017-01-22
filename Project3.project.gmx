@@ -153,11 +153,8 @@
     <object>objects\obj_GUI_Controller</object>
     <object>objects\ob_player</object>
     <object>objects\OBJ_Pingable</object>
-<<<<<<< HEAD
     <object>objects\OBJ_Box</object>
     <object>objects\obj_divingbell_new</object>
-=======
->>>>>>> refs/remotes/origin/master
   </objects>
   <rooms name="rooms">
     <room>rooms\RM_Main_Menu</room>
