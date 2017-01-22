@@ -39,8 +39,9 @@ for (i = 1; i &lt; number_fish; i+=1) {
     var fx = sx + random_range(-sizex, sizex);
     var fy = sy + random_range(-sizey, sizey);
     newfish = instance_create(fx, fy, fish_id);
-    newfish.image_xscale = random_range(15, 25) / 100
-    newfish.image_yscale = random_range(15, 25) / 100
+    newfish.original_xscale = random_range(12, 15) / 100
+    newfish.image_xscale = newfish.original_xscale
+    newfish.image_yscale = random_range(13, 15) / 100
     with (newfish) {
         while (place_meeting(fx, fy, Collidable)) {
            fx = sx + random_range(-sizex, sizex)

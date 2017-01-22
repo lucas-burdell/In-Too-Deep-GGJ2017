@@ -85,6 +85,7 @@ if (!displaying) {
       self.dialog_messages = idvar.messages
       self.start = true
    }
+   storage.Upgrade_Points += 2
    instance_destroy()
 }
 </string>

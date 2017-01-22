@@ -34,12 +34,39 @@ message_scroll_counter = 1
 step_counter = 0
 scrolling = true
 start = false
+music = noone
 </string>
           </argument>
         </arguments>
       </action>
     </event>
     <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Play text sound
+if (scrolling and !audio_exists(music)) {
+   music = audio_play_sound_at(snd_text_scroll, obj_diver.x, obj_diver.y + 100, 2, 100, 100, 1, true, 2)
+} else if (!scrolling and audio_exists(music)) {
+  audio_stop_sound(music)
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -101,32 +128,6 @@ if (message_scroll_counter + 1 &lt;= totalLength) {
    scrolling = true
 } else {
   scrolling = false
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Play text sound
-if (scrolling and !audio_exists(snd_text_scroll)) {
-   audio_play_sound(snd_text_scroll, 5, true)
-} else if (!scrolling and audio_exists(snd_text_scroll)) {
-  audio_stop_sound(snd_text_scroll)
 }
 </string>
           </argument>
