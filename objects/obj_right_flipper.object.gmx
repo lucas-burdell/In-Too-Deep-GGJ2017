@@ -3,7 +3,7 @@
   <spriteName>sp_flipper_1</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>2</depth>
+  <depth>1</depth>
   <persistent>0</persistent>
   <parentName>attach_to_player</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -49,6 +49,7 @@ rotating = true
           <argument>
             <kind>1</kind>
             <string>///attach flipper
+image_speed = 0;
 relative_xpos = xstart - obj_diver.xstart
 relative_ypos = ystart - obj_diver.ystart
 original_xscale = image_xscale
@@ -80,6 +81,9 @@ original_xscale = image_xscale
 y = obj_diver.y + relative_ypos
 image_xscale = original_xscale * obj_diver.facingDirection
 
+
+
+image_index = storage.Tier_Flippers; // Which image to show
 </string>
           </argument>
         </arguments>

@@ -30,6 +30,9 @@
     
     if (position_meeting(mouse_x, mouse_y, self)) {
         image_index = 2;
+        if (mouse_check_button_pressed(mb_left) &amp;&amp; storage.Tier_Sonar &lt; 3) {
+            storage.Tier_Sonar += 1;
+        }
     }
     
 } else {

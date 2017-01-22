@@ -84,6 +84,53 @@ starting_depth[0] = 1
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Shop Variables
+
+// 0 == starting value
+// 1 == upgrade
+// 2 == upgrade
+// 3 == final upgrade
+
+// Pressure Suit
+Tier_Pressure_Suit = 0; 
+
+// Sonar System
+Tier_Sonar = 0;
+
+// Flippers
+Tier_Flippers = 0;
+
+// Oxygen Tank
+Tier_Oxygen_Tank = 0;
+
+// Oxygen Refills
+Tier_Oxygen_Refills = 0;
+
+// Flash Light
+Tier_Flash_Light = 0;
+
+// Starting Depth
+Tier_Starting_Depth = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
   </events>
   <PhysicsObject>0</PhysicsObject>

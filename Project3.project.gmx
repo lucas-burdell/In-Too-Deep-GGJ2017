@@ -60,12 +60,14 @@
       <sprite>sprites\SPR_Text_Red</sprite>
       <sprite>sprites\SPR_Text_Upgrade</sprite>
       <sprite>sprites\SPR_Shop_Sign</sprite>
+      <sprite>sprites\SPR_Shop_Status</sprite>
     </sprites>
     <sprite>sprites\sp_tank</sprite>
     <sprite>sprites\eel</sprite>
     <sprite>sprites\anglerfish</sprite>
     <sprite>sprites\Oxygen_HUD</sprite>
     <sprite>sprites\Currency</sprite>
+    <sprite>sprites\spr_ping</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\BG_Main_Menu_01</background>
@@ -129,6 +131,14 @@
       <object>objects\OBJ_Upgrade_Light</object>
       <object>objects\OBJ_Upgrade_Depth</object>
       <object>objects\OBJ_Sign</object>
+      <object>objects\OBJ_Temp_Controller</object>
+      <object>objects\OBJ_Shop_Suit</object>
+      <object>objects\OBJ_Shop_Sonar</object>
+      <object>objects\OBJ_Shop_Flippers</object>
+      <object>objects\OBJ_Shop_Tank</object>
+      <object>objects\OBJ_Shop_Refills</object>
+      <object>objects\OBJ_Shop_Light</object>
+      <object>objects\OBJ_Shop_Depth</object>
     </objects>
     <object>objects\attach_to_player</object>
     <object>objects\obj_tank_1</object>
@@ -136,6 +146,9 @@
     <object>objects\eel_</object>
     <object>objects\Fish_Grab</object>
     <object>objects\obj_GUI_Controller</object>
+    <object>objects\ob_player</object>
+    <object>objects\OBJ_Pingable</object>
+    <object>objects\OBJ_Box</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\RM_Main_Menu</room>
