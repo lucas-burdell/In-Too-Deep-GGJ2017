@@ -127,12 +127,13 @@ draw_sprite(SPR_Shop_Signs, 0, 0, 0);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>draw_text_transformed(0,20, "Upgrade Points: " + string(storage.Upgrade_Points), 3, 3, image_angle);
+</string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="8">
+    <event eventtype="9" enumb="69">
       <action>
         <libid>1</libid>
         <id>603</id>
