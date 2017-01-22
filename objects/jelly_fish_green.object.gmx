@@ -25,9 +25,35 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>timer = 0
-upOrDown = 0
-
+            <string>///varibles for movement
+//CycleIndicators
+cycleIndicators = 0
+start = 0
+one = 1
+two = 2
+three = 3
+Repeat = 4
+//direction
+up = 90
+down = 270
+right = 0
+left = 180
+//timer
+timer = 0
+//speed changes
+StartSpeed = 1
+ChangeOne = 2
+ChangeTwo = .5
+ChangeThree = .25
+//times of change
+Start = 0
+firstChange = 900
+P = (firstChange/4)
+secondChange = (P + firstChange)
+L = (P * 2)
+thirdChange = (L + secondChange)
+Z = (L * 4)
+endCycle = (firstChange + P + L + Z)
 </string>
           </argument>
         </arguments>
@@ -50,47 +76,37 @@ upOrDown = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///up and down
-timer += 1
+            <string>///movement
+
+
+
+
+if(timer == Start &amp;&amp; cycleIndicators == start){
+motion_add(up, StartSpeed)
+cycleIndicators = one
 show_debug_message(timer)
-//show_debug_message(upOrDown)
-//direction
-up = 90
-down = 270
-right = 0
-left = 180
-//Speed changes
-addMotion = .5
-subMotion = .25
-reverse = (addMotion + addMotion)
-//before changing direction
-timebefore = 61
+} 
 
-
-
-    if (timer == 0){
-    motion_add(up, addMotion)
-    }
-    
-    
-    
-    if(upOrDown == 0){
-         if (timer &gt;= timebefore ){
-             motion_add(down,addMotion)
-             //show_debug_message(down)
-             //motion_add(down,subMotion)
-             upOrDown = 1
-             time = 1
-        } 
-        time = 1
-    } else if(upOrDown == 1){
-         if (timer &gt;= timebefore ){
-             motion_add(up,addMotion)
-             //show_debug_message(up)
-             upOrDown = 0
-             time = 1
-         }
-         time = 1
+ if(timer == Start &amp;&amp; cycleIndicators == Repeat){
+ motion_add(up, ChangeOne)
+cycleIndicators = one
+show_debug_message(timer)
+} else if(timer == firstChange &amp;&amp; cycleIndicators == one){
+motion_add(down, ChangeOne)
+cycleIndicators = two
+show_debug_message(timer)
+} else if(timer == secondChange &amp;&amp; cycleIndicators == two){
+motion_add(up, ChangeTwo)
+cycleIndicators = three
+show_debug_message(timer)
+} else if(timer == thirdChange &amp;&amp; cycleIndicators == three){
+motion_add(up, ChangeThree)
+cycleIndicators = Repeat
+show_debug_message(timer)
+}
+timer += 1
+if(timer == endCycle){
+    timer = 0
     }
 </string>
           </argument>
