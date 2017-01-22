@@ -198,7 +198,8 @@ draw_set_color(make_color_rgb(255,255,255))
 draw_set_alpha(1)
 draw_text(view_xview[view_current], view_yview[view_current] + 16, "oxygen: " + string(storage.current_oxygen));
 
-
+draw_rectangle(view_xview[view_current], view_yview[view_current] + 32, view_xview[view_current] + 16, view_yview[view_current] + 48, c_white);
+draw_sprite(Oxygen_HUD, 0, view_xview[view_current], view_yview[view_current] + 32);
 </string>
           </argument>
         </arguments>
