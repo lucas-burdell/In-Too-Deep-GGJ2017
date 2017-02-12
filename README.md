@@ -5,6 +5,7 @@ ___
 ## Technologies
 * The team used [GameMaker Studio](http://www.yoyogames.com/gamemaker) to build our game.
 * The team used [Adobe Photoshop](http://www.adobe.com/products/photoshop.html) to design the art for the game.
+
 ___
 ## Credits
 ###Story
